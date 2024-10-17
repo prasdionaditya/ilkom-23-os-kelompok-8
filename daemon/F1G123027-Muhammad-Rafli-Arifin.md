@@ -247,7 +247,8 @@ Data pengunjung dan statistik akan disimpan di `visitors.txt` dan `stats.json`, 
 ## 8. Bukti Screenshoot Program Berhasil Berjalan
 
 ## Tampilan Website
-
+![Bukti Screenshoot](screenshots/SS-website-rafliarifin.png)
 ## Tampilan Website Berhasil Menghitung Pengunjung
-
+![Bukti Screenshoot](screenshots/SS-website2-rafliarifin.png)
 ## Daemon Process Berhasil Menampilkan Log Aktivitas
+![Bukti Screenshoot](screenshots/SS-website3-rafliarifin.png)
