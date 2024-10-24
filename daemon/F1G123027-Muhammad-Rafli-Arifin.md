@@ -33,216 +33,260 @@ C:\laragon\www\daemon-project2
 - **daemon_queue**: Menyimpan data antrian kehadiran.
 
 
-## 4. Membuat Website
+## 4. Implementasi Daemon Process
 Saya membuat contoh website dengan php, contoh kasus yang saya ambil merupakan **Website Penghitung Jumlah Pengunjung dalam suatu Website**
-Dalam file `index.php`, tuliskan isi program untuk sebagai tampilan dari website. Berikut adalah contoh kode:
+File `daemon.php` akan menangani pemrosesan antrian kehadiran yang dimasukkan melalui `index.php`.
 
+### 4.1. Isi dari `index.php`
 ```php
-<?php
-// index.php
-class VisitorCounter {
-    private $visitorFile;
-    private $statsFile;
-    private $logFile;
-
-    public function __construct() {
-        $this->visitorFile = __DIR__ . '/visitors.txt';
-        $this->statsFile = __DIR__ . '/stats.json';
-        $this->logFile = __DIR__ . '/daemon.log';
-        
-        // Buat file pengunjung jika belum ada
-        if (!file_exists($this->visitorFile)) {
-            file_put_contents($this->visitorFile, '0');
-        }
-    }
-
-    public function incrementVisitor() {
-        $count = (int)file_get_contents($this->visitorFile);
-        $count++;
-        file_put_contents($this->visitorFile, $count);
-        return $count;
-    }
-
-    public function getStats() {
-        if (file_exists($this->statsFile)) {
-            return json_decode(file_get_contents($this->statsFile), true);
-        }
-        return null;
-    }
-
-    public function getLogs($lines = 10) {
-        if (file_exists($this->logFile)) {
-            $logs = file($this->logFile);
-            return array_slice($logs, -$lines);
-        }
-        return [];
-    }
-
-    public function getDaemonStatus() {
-        return file_exists(__DIR__ . '/daemon.pid') ? 'Running' : 'Stopped';
-    }
-}
-
-// Inisialisasi counter
-$counter = new VisitorCounter();
-$visitorCount = $counter->incrementVisitor();
-$stats = $counter->getStats();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Visitor Counter</title>
+    <title>Sistem Daftar Hadir Digital</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 600px;
+            margin: 20px;
         }
-        .stats-box {
-            background: #f8f8f8;
-            padding: 15px;
-            border-radius: 4px;
-            margin: 10px 0;
+        h2, h3 {
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 30px;
         }
-        .counter {
-            font-size: 24px;
-            font-weight: bold;
-            color: #007bff;
+        .input-group {
+            margin-bottom: 20px;
         }
-        .logs {
-            background: #f8f8f8;
-            padding: 15px;
-            border-radius: 4px;
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        input:focus {
+            border-color: #1a73e8;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #1557b0;
+        }
+        .success {
+            color: #0f9d58;
+            background: #e6f4ea;
+            padding: 10px;
+            border-radius: 5px;
             margin-top: 20px;
-            font-family: monospace;
+            text-align: center;
+        }
+        .error {
+            color: #d93025;
+            background: #fce8e6;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .time {
+            text-align: center;
+            color: #5f6368;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .attendance-list {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+        }
+        .attendance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .attendance-table th,
+        .attendance-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .attendance-table th {
+            background-color: #f8f9fa;
+            color: #1a73e8;
+        }
+        .attendance-table tr:hover {
+            background-color: #f8f9fa;
+        }
+        .no-data {
+            text-align: center;
+            color: #5f6368;
+            padding: 20px;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Website Penghitung Jumlah Pengunjung</h1>
-        
-        <div class="stats-box">
-            <h2>Statistik Terbaru</h2>
-            <p>Jumlah Pengunjung: <span class="counter"><?php echo $visitorCount; ?></span></p>
-            <?php if ($stats): ?>
-                <p>Terakhir Diperbarui: <?php echo $stats['last_updated']; ?></p>
-                <p>Total Pengunjung Hari ini: <?php echo $stats['total_visitors']; ?></p>
-            <?php endif; ?>
-        </div>
-
-        <div class="stats-box">
-            <h2>Statistik</h2>
-            <?php if ($stats && isset($stats['hourly_stats'])): ?>
-                <?php foreach(array_slice($stats['hourly_stats'], -5) as $hour => $count): ?>
-                    <p><?php echo $hour; ?>:00 - <?php echo $count; ?> visitors</p>
-                <?php endforeach; ?>
-            <?php endif; ?>
-        </div>
-
-        <div class="logs">
-            <h2>System Logs</h2>
-            <pre><?php
-            foreach($counter->getLogs() as $log) {
-                echo htmlspecialchars($log);
+        <h2>Daftar Hadir Digital</h2>
+        <form method="POST" action="index.php">
+            <div class="input-group">
+                <input type="text" name="nama" placeholder="Masukkan nama Anda" required>
+            </div>
+            <button type="submit" name="hadir">Konfirmasi Kehadiran</button>
+        </form>
+        <div id="message">
+        <?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['hadir'])) {
+    $nama = trim($_POST['nama']);
+    $timestamp = date('Y-m-d H:i:s');
+    
+    // Cek apakah sudah ada entri yang sama dalam 5 detik terakhir
+    $isDoubleClick = false;
+    if (file_exists('daemon_log.txt')) {
+        $logs = file_get_contents('daemon_log.txt');
+        $lastEntry = "Kehadiran tercatat - Nama: $nama, Waktu:";
+        if (strpos($logs, $lastEntry) !== false) {
+            $entries = explode("\n", $logs);
+            foreach ($entries as $entry) {
+                if (strpos($entry, $lastEntry) !== false) {
+                    $entryTime = strtotime(substr($entry, 1, 19)); // Ambil timestamp dari log
+                    if (time() - $entryTime < 5) { // Cek jika entri dalam 5 detik terakhir
+                        $isDoubleClick = true;
+                        break;
+                    }
+                }
             }
-            ?></pre>
+        }
+    }
+    
+    if (!$isDoubleClick) {
+        $data = "$nama|$timestamp\n";
+        file_put_contents('daemon_queue.txt', $data, FILE_APPEND);
+        echo "<div class='success'>
+                <strong>Kehadiran berhasil tercatat</strong><br>
+                Nama: $nama
+                <div class='time'>Waktu: $timestamp</div>
+              </div>";
+    } else {
+        echo "<div class='error'>
+                <strong>Mohon tunggu sebentar</strong><br>
+                Kehadiran Anda sudah tercatat
+              </div>";
+    }
+}
+?>
+        </div>
+
+        <div class="attendance-list">
+            <h3>Daftar Kehadiran Hari Ini</h3>
+            <?php
+            $logFile = 'daemon_log.txt';
+            if (file_exists($logFile) && filesize($logFile) > 0) {
+                $logs = file_get_contents($logFile);
+                $entries = array_filter(explode("\n", $logs));
+                
+                if (!empty($entries)) {
+                    echo '<table class="attendance-table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Waktu</th>
+                                </tr>
+                            </thead>
+                            <tbody>';
+                    
+                    $no = 1;
+                    foreach (array_reverse($entries) as $entry) {
+                        if (preg_match('/\[(.*?)\] Kehadiran tercatat - Nama: (.*?), Waktu: (.*)/', $entry, $matches)) {
+                            $waktuLog = $matches[1];
+                            $nama = $matches[2];
+                            $waktuHadir = $matches[3];
+                            
+                            echo "<tr>
+                                    <td>$no</td>
+                                    <td>$nama</td>
+                                    <td>$waktuHadir</td>
+                                  </tr>";
+                            $no++;
+                        }
+                    }
+                    
+                    echo '</tbody></table>';
+                } else {
+                    echo '<div class="no-data">Belum ada data kehadiran</div>';
+                }
+            } else {
+                echo '<div class="no-data">Belum ada data kehadiran</div>';
+            }
+            ?>
         </div>
     </div>
-
-    <script>
-        // Refresh halaman setiap 10 detik
-        setTimeout(function() {
-            location.reload();
-        }, 10000);
-    </script>
 </body>
 </html>
 ```
-
-## 5. Membuat Daemon Process
-Dalam file `daemon.php`, tuliskan logika untuk mengelola statistik pengunjung dan mencatat aktivitas. Berikut adalah contoh kode untuk daemon process:
+### 4.1. Isi dari `daemon.php`
 
 ```php
 <?php
-class VisitorDaemon {
-    private $logFile;
-    private $statsFile;
-    private $isRunning;
+// Fungsi untuk menulis log
+function tulisLog($pesan) {
+    $berkaLog = 'daemon_log.txt';
+    $waktu = date('Y-m-d H:i:s');
+    file_put_contents($berkaLog, "[$waktu] $pesan\n", FILE_APPEND);
+}
 
-    public function __construct() {
-        $this->logFile = __DIR__ . '/daemon.log';
-        $this->statsFile = __DIR__ . '/stats.json';
-        $this->isRunning = true;
-
-        // Buat file stats.json jika belum ada
-        if (!file_exists($this->statsFile)) {
-            $initialStats = [
-                'total_visitors' => 0,
-                'last_updated' => date('Y-m-d H:i:s'),
-                'hourly_stats' => []
-            ];
-            file_put_contents($this->statsFile, json_encode($initialStats, JSON_PRETTY_PRINT));
-        }
-    }
-
-    public function writeLog($message) {
-        $timestamp = date('Y-m-d H:i:s');
-        file_put_contents($this->logFile, "[$timestamp] $message\n", FILE_APPEND);
-    }
-
-    public function updateStats() {
-        $stats = json_decode(file_get_contents($this->statsFile), true);
-        $currentHour = date('Y-m-d H');
+// Fungsi untuk memproses antrian kehadiran
+function prosesAntrian() {
+    $berkaAntrian = 'daemon_queue.txt';
+    
+    if (file_exists($berkaAntrian) && filesize($berkaAntrian) > 0) {
+        $data = file_get_contents($berkaAntrian);
+        $baris = explode("\n", trim($data));
         
-        // Update statistik per jam
-        if (!isset($stats['hourly_stats'][$currentHour])) {
-            $stats['hourly_stats'][$currentHour] = 0;
-        }
+        // Kosongkan file antrian
+        file_put_contents($berkaAntrian, '');
         
-        // Ambil jumlah pengunjung dari visitors.txt
-        if (file_exists(__DIR__ . '/visitors.txt')) {
-            $currentVisitors = (int)file_get_contents(__DIR__ . '/visitors.txt');
-            $stats['total_visitors'] = $currentVisitors;
-            $stats['hourly_stats'][$currentHour] = $currentVisitors;
-        }
-        
-        $stats['last_updated'] = date('Y-m-d H:i:s');
-        
-        // Simpan kembali statistik
-        file_put_contents($this->statsFile, json_encode($stats, JSON_PRETTY_PRINT));
-        $this->writeLog("Statistics updated - Total visitors: " . $stats['total_visitors']);
-    }
-
-    public function start() {
-        $this->writeLog("Visitor counter daemon started");
-
-        while ($this->isRunning) {
-            $this->updateStats();
-            sleep(5); // Update setiap 5 detik
-
-            if (file_exists(__DIR__ . '/stop.flag')) {
-                $this->isRunning = false;
-                unlink(__DIR__ . '/stop.flag');
-                $this->writeLog("Daemon stopped");
-            }
+        foreach ($baris as $baris) {
+            if (empty($baris)) continue;
+            
+            list($nama, $waktu) = explode('|', $baris);
+            tulisLog("Kehadiran tercatat - Nama: $nama, Waktu: $waktu");
         }
     }
 }
 
-// Jalankan daemon
-$daemon = new VisitorDaemon();
-$daemon->start();
-?>
+// Loop daemon
+while (true) {
+    prosesAntrian();
+    sleep(5); // Tunggu 5 detik sebelum cek lagi
+}
 ```
 
 ## 6. Menjalankan Daemon Process
