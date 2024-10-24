@@ -335,4 +335,4 @@ Log aktivitas daemon process akan disimpan di `daemon_log.txt`. Anda bisa membuk
 ![Bukti Screenshoot](https://drive.google.com/uc?id=1dUv9YfRHKzCY9qXzcqOcO_C3H4Rxm3P9)
 
 ## Daemon Process Menampilkan Log Daftar Hadir
-![Bukti Screenshoot](https://drive.google.com/uc?id=
+![Bukti Screenshoot](https://drive.google.com/uc?id=1GR6o4Rx00Tcygf8LIodHLdGsCUPLK7rp)
