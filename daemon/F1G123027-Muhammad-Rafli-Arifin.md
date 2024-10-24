@@ -8,6 +8,16 @@ Sebelum memulai, pastikan software yang diperlukan Anda sudah siap, termasuk:
 - **Laragon** sebagai server lokal
 - **NSSM** (Non-Sucking Service Manager) sebagai tool untuk menjalankan PHP sebagai service di Windows
 
+### 2.1. Instalasi Laragon
+1. Unduh dan instal **Laragon** dari [laragon.org](https://laragon.org/download).
+2. Jalankan Laragon dan pastikan layanan Apache dan MySQL aktif.
+
+### 2.2. Instalasi NSSM
+1. Unduh **NSSM** dari situs resminya [nssm.cc](https://nssm.cc/download).
+2. Ekstrak file ke direktori seperti `D:\nssm`.
+3. Gunakan NSSM untuk menjalankan file PHP daemon sebagai service.
+
+
 ## 3. Struktur Proyek
 Struktur folder proyek Anda sebagai berikut:
 ```
