@@ -289,6 +289,27 @@ while (true) {
 }
 ```
 
+## 5. Menjalankan Daemon Process Menggunakan NSSM
+NSSM digunakan untuk menjalankan daemon.php sebagai service di Windows agar proses ini tetap berjalan meskipun terminal ditutup.
+
+### 5.1 Menambahkan Service dengan NSSM
+1. Buka Command Prompt atau PowerShell sebagai Administrator.
+2. Jalankan perintah berikut untuk menambah service:
+
+```
+D:\nssm-2.24\win64>nssm install DaemonAbsen
+```
+3. Setelah menjalankan perintah tersebut, akan muncul GUI. Isi konfigurasi berikut:
+- Path: arahkan ke executable PHP di Laragon, misalnya `D:\laragon\bin\php\php-8.x.x-Win32\php.exe`
+- Startup directory: arahkan ke direktori proyek Anda, misalnya
+  `D:\laragon\www\daemon-project`
+- Arguments: tambahkan daemon.php agar PHP menjalankan file daemon tersebut.
+4. Klik Install Service
+
+### 5.2 Menjalankan Service
+Setelah service berhasil ditambahkan,jalankan service dengan perintah berikut:
+`nssm start DaemonAbsen`
+
 ## 6. Menjalankan Daemon Process
 1. Buka command line di Laragon.
 2. Arahkan ke direktori proyek Anda:
