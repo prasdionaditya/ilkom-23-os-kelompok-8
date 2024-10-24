@@ -307,34 +307,32 @@ D:\nssm-2.24\win64>nssm install DaemonAbsen
 4. Klik Install Service
 
 ### 5.2 Menjalankan Service
-Setelah service berhasil ditambahkan,jalankan service dengan perintah berikut:
-`nssm start DaemonAbsen`
+Setelah service berhasil ditambahkan,jalankan service dengan perintah berikut `nssm start DaemonAbsen`:
 
+```
+D:\nssm-2.24\win64>nssm start DaemonAbsen
+```
+
+### 5.3 Mematikan Service
+Setelah service berhasil ditambahkan, matikan service dengan perintah berikut `nssm stop DaemonAbsen`:
+
+```
+D:\nssm-2.24\win64>nssm stop DaemonAbsen
+```
 
 ## 6. Memantau Log
 Log aktivitas daemon process akan disimpan di `daemon_log.txt`. Anda bisa membuka file ini untuk melihat pesan terkait pemrosesan pesanan yang telah dilakukan oleh daemon process.
 
 
-## 7. Menjalankan Daemon Process
-1. Buka command line di Laragon.
-2. Arahkan ke direktori proyek Anda:
-   ```bash
-   cd C:\laragon\www\daemon-project
-   ```
-3. Jalankan daemon process dengan perintah:
-   ```bash
-   php daemon.php
-   ```
-4. Pastikan daemon process berjalan di latar belakang dan memperbarui statistik secara otomatis.
-
-## 7. Memantau Statistik dan Log
-Data pengunjung dan statistik akan disimpan di `visitors.txt` dan `stats.json`, sedangkan log aktivitas daemon akan disimpan di `daemon.log`. Anda bisa membuka file ini untuk melihat pesan terkait aktivitas yang telah dilakukan oleh daemon process.
-
-## 8. Bukti Screenshoot Program Berhasil Berjalan
+## 7.Bukti Screenshoot Program Berhasil Berjalan
+## Tampilan Start dan Stop Daemon Service (DaemonAbsen)
+![Bukti Screenshoot](https://drive.google.com/uc?id=102ZV5Sxr81s7wrHB2DO6U8j3AbGRiE6W)
 
 ## Tampilan Website
-![Bukti Screenshoot](screenshots/SS-website-rafliarifin.png)
-## Tampilan Website Berhasil Menghitung Pengunjung
-![Bukti Screenshoot](screenshots/SS-website2-rafliarifin.png)
-## Daemon Process Berhasil Menampilkan Log Aktivitas
-![Bukti Screenshoot](screenshots/SS-website3-rafliarifin.png)
+![Bukti Screenshoot](https://drive.google.com/uc?id=1M9YeAfc1hc4yJlVd1j_-g5nOdOWw6kmU)
+
+## Berhasil Memasukkan Daftar Hadir
+![Bukti Screenshoot](https://drive.google.com/uc?id=1dUv9YfRHKzCY9qXzcqOcO_C3H4Rxm3P9)
+
+## Daemon Process Menampilkan Log Daftar Hadir
+![Bukti Screenshoot](https://drive.google.com/uc?id=
