@@ -303,7 +303,7 @@ D:\nssm-2.24\win64>nssm install DaemonAbsen
 - Path: arahkan ke executable PHP di Laragon, misalnya `D:\laragon\bin\php\php-8.x.x-Win32\php.exe`
 - Startup directory: arahkan ke direktori proyek Anda, misalnya
   `D:\laragon\www\daemon-project`
-- Arguments: tambahkan daemon.php agar PHP menjalankan file daemon tersebut.
+- Arguments: tambahkan `daemon.php` agar PHP menjalankan file daemon tersebut.
 4. Klik Install Service
 
 ### 5.2 Menjalankan Service
