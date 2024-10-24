@@ -4,7 +4,9 @@
 Pada kasus ini, kita akan membahas penerapan **daemon process** untuk menangani tugas-tugas yang berjalan di latar belakang, seperti pemrosesan data otomatis tanpa interaksi langsung pengguna. Daemon process ini akan membantu dalam mengelola antrian kehadiran, memprosesnya secara otomatis setiap beberapa detik. Pengembangan akan menggunakan **Laragon** sebagai server lokal, dan daemon akan diimplementasikan menggunakan **NSSM** agar dapat berjalan terus-menerus sebagai service di Windows.
 
 ## 2. Persiapan
-Sebelum memulai, pastikan Anda telah menginstal dan mengkonfigurasi lingkungan pengembangan seperti **Laragon**. Pastikan juga semua file yang diperlukan telah siap.
+Sebelum memulai, pastikan software yang diperlukan Anda sudah siap, termasuk:
+- **Laragon** sebagai server lokal
+- **NSSM** (Non-Sucking Service Manager) sebagai tool untuk menjalankan PHP sebagai service di Windows
 
 ## 3. Struktur Proyek
 Struktur folder proyek Anda sebagai berikut:
