@@ -1,4 +1,4 @@
-# Proses Menjalankan Website Penghitung Pengunjung Menggunakan Daemon Process dengan Laragon
+# Proses Menjalankan Website Daftar Hadir dengan Daemon Process menggunakan Laragon
 
 ## 1. Pendahuluan
 Website ini memanfaatkan **daemon process** untuk menghitung dan mencatat jumlah pengunjung secara otomatis. Daemon berjalan di latar belakang, memperbarui statistik setiap beberapa detik, dan mencatat aktivitas ke dalam log. Dalam panduan ini, kita akan menggunakan **Laragon** sebagai lingkungan pengembangan.
