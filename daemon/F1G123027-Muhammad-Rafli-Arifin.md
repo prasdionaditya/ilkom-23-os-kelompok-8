@@ -1,7 +1,7 @@
 # Proses Menjalankan Website Daftar Hadir dengan Daemon Process menggunakan Laragon
 
 ## 1. Pendahuluan
-Website ini memanfaatkan **daemon process** untuk menghitung dan mencatat jumlah pengunjung secara otomatis. Daemon berjalan di latar belakang, memperbarui statistik setiap beberapa detik, dan mencatat aktivitas ke dalam log. Dalam panduan ini, kita akan menggunakan **Laragon** sebagai lingkungan pengembangan.
+Pada kasus ini, kita akan membahas penerapan **daemon process** untuk menangani tugas-tugas yang berjalan di latar belakang, seperti pemrosesan data otomatis tanpa interaksi langsung pengguna. Daemon process ini akan membantu dalam mengelola antrian kehadiran, memprosesnya secara otomatis setiap beberapa detik. Pengembangan akan menggunakan **Laragon** sebagai server lokal, dan daemon akan diimplementasikan menggunakan **NSSM** agar dapat berjalan terus-menerus sebagai service di Windows.
 
 ## 2. Persiapan
 Sebelum memulai, pastikan Anda telah menginstal dan mengkonfigurasi lingkungan pengembangan seperti **Laragon**. Pastikan juga semua file yang diperlukan telah siap.
