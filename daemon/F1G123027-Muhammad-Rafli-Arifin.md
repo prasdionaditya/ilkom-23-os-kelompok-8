@@ -21,13 +21,17 @@ Sebelum memulai, pastikan software yang diperlukan Anda sudah siap, termasuk:
 ## 3. Struktur Proyek
 Struktur folder proyek Anda sebagai berikut:
 ```
-C:\laragon\www\daemon-project
+C:\laragon\www\daemon-project2
 ├── daemon.php
 ├── index.php
-├── visitors.txt
-├── stats.json
-└── daemon.log
+├── daemon_log.txt
+└── daemon_queue.txt
 ```
+- **daemon.php**: Berisi file daemon untuk menjalankan proses latar belakang.
+- **daemon_log.txt**: Berisi log file dari proses daemon.
+- **index.php**: File untuk menangani input dari pengguna (konfirmasi kehadiran).
+- **daemon_queue**: Menyimpan data antrian kehadiran.
+
 
 ## 4. Membuat Website
 Saya membuat contoh website dengan php, contoh kasus yang saya ambil merupakan **Website Penghitung Jumlah Pengunjung dalam suatu Website**
