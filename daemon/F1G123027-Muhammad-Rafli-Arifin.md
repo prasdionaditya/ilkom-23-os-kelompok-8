@@ -310,7 +310,12 @@ D:\nssm-2.24\win64>nssm install DaemonAbsen
 Setelah service berhasil ditambahkan,jalankan service dengan perintah berikut:
 `nssm start DaemonAbsen`
 
-## 6. Menjalankan Daemon Process
+
+## 6. Memantau Log
+Log aktivitas daemon process akan disimpan di `daemon_log.txt`. Anda bisa membuka file ini untuk melihat pesan terkait pemrosesan pesanan yang telah dilakukan oleh daemon process.
+
+
+## 7. Menjalankan Daemon Process
 1. Buka command line di Laragon.
 2. Arahkan ke direktori proyek Anda:
    ```bash
