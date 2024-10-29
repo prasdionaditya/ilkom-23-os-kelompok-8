@@ -13,4 +13,4 @@
 5. **Bukti Screenshot**: 
    Berikut adalah bukti visual yang menunjukkan bahwa aplikasi berhasil dijalankan:
 
-   ![Screenshot Aplikasi Berjalan](Screenshot 2024-10-29 155630.png)
+   ![Screenshot Aplikasi Berjalan](https://drive.google.com/file/d/1cl5bE_3PUiwL67lshMeGjnKM0of6NIDO/view?usp=drive_link)
