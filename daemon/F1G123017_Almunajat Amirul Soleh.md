@@ -42,3 +42,9 @@ $ sudo systemctl start aas.service
 $ sudo systemctl status aas.service
 ```
 
+## Bukti Daemon Telah Berjalan
+Jika konfigurasi berhasil, maka hasil dari `systemctl status aas.service` akan menunjukkan status **active (running)**, menandakan bahwa daemon sudah berjalan.
+![Bukti daemon](https://drive.google.com/uc?export=download&id=1BMNzmmrsg6BDgLHiyrGdpLgBuD4kKSsC)
+## Akses Aplikasi
+![tampilan web](https://drive.google.com/uc?export=download&id=1iIag0_ssBLoNCedL2fthEKp6ebotfcZV)
+
