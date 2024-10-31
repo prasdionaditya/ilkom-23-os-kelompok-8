@@ -1,4 +1,4 @@
-# Proses Menjalankan Website Daftar Hadir dengan Daemon Process menggunakan Laragon
+# Membuat Daemon Proses di Ubuntu
 
 ## 1. Pendahuluan
 Pada kasus ini, kita akan membahas penerapan **daemon process** untuk menangani tugas-tugas yang berjalan di latar belakang, seperti pemrosesan data otomatis tanpa interaksi langsung pengguna. Daemon process ini akan membantu dalam mengelola antrian kehadiran, memprosesnya secara otomatis setiap beberapa detik. Pengembangan akan menggunakan **Laragon** sebagai server lokal, dan daemon akan diimplementasikan menggunakan **NSSM** agar dapat berjalan terus-menerus sebagai service di Windows.
