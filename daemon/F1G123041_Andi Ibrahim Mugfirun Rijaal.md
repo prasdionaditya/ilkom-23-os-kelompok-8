@@ -27,9 +27,11 @@ WantedBy=multi-user.target
 ```
 
 ## Jalankan Perintah Daemon
+```bash
 $ sudo systemctl daemon-reload
 $ sudo systemctl start irun.service
 $ sudo systemctl status irun.service
+```
 
 ## Bukti daemon telah berjalan
 ![Bukti daemon](https://drive.google.com/uc?export=download&id=11WYM1xRO5lwYOT8RTnrslXm-AqG5pznm)
