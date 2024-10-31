@@ -1,41 +1,50 @@
 # Membuat Daemon Proses di Ubuntu
 
-## 1. Pendahuluan
-Pada kasus ini, kita akan membahas penerapan **daemon process** untuk menangani tugas-tugas yang berjalan di latar belakang, seperti pemrosesan data otomatis tanpa interaksi langsung pengguna. Daemon process ini akan membantu dalam mengelola antrian kehadiran, memprosesnya secara otomatis setiap beberapa detik. Pengembangan akan menggunakan **Laragon** sebagai server lokal, dan daemon akan diimplementasikan menggunakan **NSSM** agar dapat berjalan terus-menerus sebagai service di Windows.
+## 1. Deskripsi
+Dokumentasi ini menjelaskan langkah-langkah untuk membuat dan mengonfigurasi daemon service di Ubuntu untuk menjalankan aplikasi Python.
 
-## 2. Persiapan
-Sebelum memulai, pastikan software yang diperlukan Anda sudah siap, termasuk:
-- **Laragon** sebagai server lokal
-- **NSSM** (Non-Sucking Service Manager) sebagai tool untuk menjalankan PHP sebagai service di Windows
-
-### 2.1. Instalasi Laragon
-1. Unduh dan instal **Laragon** dari [laragon.org](https://laragon.org/download).
-2. Jalankan Laragon dan pastikan layanan Apache dan MySQL aktif.
-
-### 2.2. Instalasi NSSM
-1. Unduh **NSSM** dari situs resminya [nssm.cc](https://nssm.cc/download).
-2. Ekstrak file ke direktori seperti `D:\nssm`.
-3. Gunakan NSSM untuk menjalankan file PHP daemon sebagai service.
-
-
-## 3. Struktur Proyek
-Struktur folder proyek Anda sebagai berikut:
+## 2. Buat file .service
+Masuk sebagai superuser di terminal, lalu jalankan perintah di bawah ini,
 ```
-C:\laragon\www\daemon-project2
-├── daemon.php
-├── index.php
-├── daemon_log.txt
-└── daemon_queue.txt
+sudo nano /etc/systemd/system/rafli.service
 ```
-- **daemon.php**: Berisi file daemon untuk menjalankan proses latar belakang.
-- **daemon_log.txt**: Berisi log file dari proses daemon.
-- **index.php**: File untuk menangani input dari pengguna (konfirmasi kehadiran).
-- **daemon_queue**: Menyimpan data antrian kehadiran.
+### 2.1 Isi file service dengan konfigurasi berikut (sesuaikan path):
+```
+[Unit]
+Description=Rafli Daemon
+After=network.target
+
+[Service]
+User=rafli
+WorkingDirectory=/home/rafli/myproject
+Environment="PATH=/home/rafli/myproject/venv/bin"
+ExecStart=/home/rafli/myproject/venv/bin/uvicorn main:app --host 0.0.0.0 --port 7080
+
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+```
 
 
-## 4. Implementasi Daemon Process
-Saya membuat contoh website dengan php, contoh kasus yang saya ambil merupakan **Website Penghitung Jumlah Pengunjung dalam suatu Website**
-File `daemon.php` akan menangani pemrosesan antrian kehadiran yang dimasukkan melalui `index.php`.
+## 4. Menjalankan dan Menghentikan daemon service
+```
+- Reload daemon
+sudo systemctl daemon-reload
+
+- Enable service
+sudo systemctl enable rafli.service
+
+- Start service
+sudo systemctl start rafli.service
+
+- Cek status service
+sudo systemctl status rafli.service
+
+- Menghentikan service
+sudo systemctl stop rafli.service
+```
 
 ### 4.1. Isi dari `index.php`
 ```php
