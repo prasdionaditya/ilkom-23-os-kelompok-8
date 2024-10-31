@@ -27,3 +27,18 @@ ExecStart=/home/aas/venv/bin/uvicorn main:app --reload --port 7080
 [Install]
 WantedBy=multi-user.target
 ```
+
+> **Catatan:**
+> - Pastikan `User` dan `WorkingDirectory` sesuai dengan konfigurasi direktori dan user pada sistem kamu.
+> - `ExecStart` diarahkan ke environment Python yang sudah diaktifkan (`venv`) dan menjalankan Uvicorn untuk aplikasi FastAPI pada `main.py`.
+
+## Jalankan Perintah Daemon
+
+Setelah menyimpan konfigurasi di file `almunajat.service`, jalankan perintah berikut untuk mengaktifkan dan memulai daemon:
+
+```bash
+$ sudo systemctl daemon-reload
+$ sudo systemctl start aas.service
+$ sudo systemctl status aas.service
+```
+
