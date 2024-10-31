@@ -42,3 +42,8 @@ $ sudo systemctl start aas.service
 $ sudo systemctl status aas.service
 ```
 
+## Bukti Daemon Telah Berjalan
+Jika konfigurasi berhasil, maka hasil dari `systemctl status aas.service` akan menunjukkan status **active (running)**, menandakan bahwa daemon sudah berjalan.
+
+## Akses Aplikasi
+Tampilan daemon FastAPI
