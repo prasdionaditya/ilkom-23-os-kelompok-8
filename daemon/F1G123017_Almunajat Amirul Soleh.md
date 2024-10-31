@@ -1,4 +1,4 @@
-Berikut adalah panduan untuk membuat service daemon `aas.service` untuk menjalankan aplikasi FastAPI:
+Berikut adalah panduan untuk membuat service daemon `aas.service` :
 
 # Panduan Pembuatan Daemon Process untuk almunajat.service
 
