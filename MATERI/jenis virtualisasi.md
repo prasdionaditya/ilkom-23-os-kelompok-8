@@ -1,4 +1,4 @@
-### **2. Jenis-Jenis Virtualisasi**
+### **Jenis-Jenis Virtualisasi**
 
 Virtualisasi adalah teknologi yang memungkinkan pembagian sumber daya perangkat keras atau perangkat lunak untuk membuat lingkungan yang terisolasi, disebut sebagai mesin virtual (VM), atau lingkungan terisolasi lainnya. Berikut adalah berbagai jenis virtualisasi yang banyak digunakan dalam dunia teknologi informasi:
 
