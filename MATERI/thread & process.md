@@ -35,12 +35,3 @@ Tentu, mari kita bahas mengenai **thread** dan **process** dalam ilmu komputer. 
 **Kesimpulan**
 
 Memahami konsep thread dan proses sangat penting bagi seorang programmer. Dengan menggunakan thread secara efektif, Anda dapat membangun aplikasi yang lebih responsif, efisien, dan skalabel.
-
-**Apakah Anda ingin mempelajari lebih lanjut tentang topik tertentu, seperti:**
-
-* **Implementasi thread dalam bahasa pemrograman tertentu (misalnya, Java, Python, C++)?**
-* **Algoritma penjadwalan thread?**
-* **Masalah-masalah sinkronisasi thread dan cara mengatasinya?**
-* **Perbandingan antara proses dan task dalam sistem operasi?**
-
-Jangan ragu untuk bertanya!
