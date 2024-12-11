@@ -1,0 +1,516 @@
+[33mcommit a70702eb5a1d074a817d579908929263d6976da2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Wed Dec 11 22:42:20 2024 +0800
+
+    buat file informasi perbedaan docker biasa dan docker-compose
+
+[33mcommit 06716fca13ba5ff3e9b40ecfa0bcd937f1bb8848[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Wed Dec 11 22:39:49 2024 +0800
+
+    buat file informasi docker-compose
+
+[33mcommit 1d38f399b5119b851cbf71943f6b441cf01ed131[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Wed Dec 11 22:36:59 2024 +0800
+
+    buat file informasi dockerfile
+
+[33mcommit a619796272739f7a8bc41c296e0c45fa8f5e21f6[m
+Merge: 01665f9 fc251e6
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Wed Dec 11 22:30:42 2024 +0800
+
+    buat file informasi fungsi-docker
+
+[33mcommit fc251e639bdee63a362d7da0a8bedd53de8f4d99[m
+Author: prasdionaditya <prasdionaditya@gmail.com>
+Date:   Wed Dec 11 22:28:35 2024 +0800
+
+    memindahkan file linux ke dalam folder materi
+
+[33mcommit 01665f9091f73f2e638c537fb35850b54f203617[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Wed Dec 11 22:28:23 2024 +0800
+
+    buat file informasi fungsi-docker
+
+[33mcommit a53c3a89378119268f9ac12064ea85ab9f54067f[m
+Author: prasdionaditya <prasdionaditya@gmail.com>
+Date:   Wed Dec 11 22:27:50 2024 +0800
+
+    .
+
+[33mcommit a40630022012ca5ec8660e03e709c1e3d36c4f99[m
+Merge: 6d69161 bb05a63
+Author: prasdionaditya <prasdionaditya@gmail.com>
+Date:   Wed Dec 11 22:26:32 2024 +0800
+
+    Merge branch 'main' of https://github.com/prasdionaditya/ilkom-23-os-kelompok-8
+
+[33mcommit 6d691613205e7267617e4a42652d6f3faead2dc8[m
+Merge: a17d182 663403b
+Author: prasdionaditya <prasdionaditya@gmail.com>
+Date:   Wed Dec 11 22:26:28 2024 +0800
+
+    .
+
+[33mcommit bb05a6310d5e12c169f8b85314d1699123c17241[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Wed Dec 11 22:25:03 2024 +0800
+
+    membbuat file informasi tentang linux
+
+[33mcommit a17d182e0839e365fa34114305dd9dcef7035d92[m
+Author: prasdionaditya <prasdionaditya@gmail.com>
+Date:   Wed Dec 11 22:24:43 2024 +0800
+
+    merapihkan folder
+
+[33mcommit 663403b573f2a88473ec8099788e5db717155fc2[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Wed Dec 11 22:17:59 2024 +0800
+
+    hapus commit unfaedah
+
+[33mcommit 409117495b1f12995a5d323c9e858143854b5c2e[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Wed Dec 11 22:10:35 2024 +0800
+
+    menghapus commit aneh
+
+[33mcommit 6be3934913e8cf3e6b03affb0375afb6d8e9b81d[m
+Author: yasminedwi <yayayyyy25@gmail.com>
+Date:   Fri Nov 29 14:34:10 2024 +0800
+
+    tes
+
+[33mcommit 540fe79ee24b82da86c34c82ebee0f6672e74eb3[m
+Author: Nanaa813 <alee95514@gmail.com>
+Date:   Fri Nov 29 14:07:12 2024 +0800
+
+    hypervisor
+
+[33mcommit bfa63f26ffe5262dfed30999f795ecf7044cb747[m
+Author: Nanaa813 <alee95514@gmail.com>
+Date:   Fri Nov 29 14:06:34 2024 +0800
+
+    del
+
+[33mcommit be4c7435340240b9aaea78836dbc9e0b05b795bb[m
+Author: Nanaa813 <alee95514@gmail.com>
+Date:   Fri Nov 29 14:05:51 2024 +0800
+
+    virtualization
+
+[33mcommit 8764cebbad3bc5b823b9072e19e0f9e98e12ea78[m
+Merge: 2fcfbc4 e6ccf0c
+Author: Nanaa813 <alee95514@gmail.com>
+Date:   Fri Nov 29 13:57:10 2024 +0800
+
+    Merge branch 'main' of https://github.com/prasdionaditya/ilkom-23-os-kelompok-8
+
+[33mcommit 2fcfbc4d7c5be05484b082c5bb13038c17ae09d5[m
+Author: Nanaa813 <alee95514@gmail.com>
+Date:   Fri Nov 29 13:57:05 2024 +0800
+
+    virtual
+
+[33mcommit e6ccf0cbbb5c2932c33eef34338dbfa4c456e0b6[m
+Author: yaya-bit-hue <ydw3110@gmail.com>
+Date:   Fri Nov 29 13:55:55 2024 +0800
+
+    yea
+
+[33mcommit 3aa66b3bb10ea8f3fe590646b8b99cecc6497e5e[m
+Author: yaya-bit-hue <ydw3110@gmail.com>
+Date:   Fri Nov 29 13:54:33 2024 +0800
+
+    relog yea
+
+[33mcommit 02d4b81cbf0379557c9594440ef1ce2029558343[m
+Author: yaya-bit-hue <ydw3110@gmail.com>
+Date:   Fri Nov 29 13:53:30 2024 +0800
+
+    again
+
+[33mcommit d1329960aa751c7c51224f0b5a02889f4124b85d[m
+Author: yaya-bit-hue <ydw3110@gmail.com>
+Date:   Fri Nov 29 13:53:09 2024 +0800
+
+    coba2
+
+[33mcommit b7d70d4bc3d5b6c7e67a44d6e714766861f730a8[m
+Merge: 91b8167 b43f1bf
+Author: Prasdion Aditya <prasdionaditya@gmail.com>
+Date:   Fri Nov 8 14:50:35 2024 +0800
+
+    Merge branch 'main' of https://github.com/prasdionaditya/ilkom-23-os-kelompok-8
+
+[33mcommit 91b81671a15ecf5647873ee9d3ebf36d9882e0e0[m
+Author: Prasdion Aditya <prasdionaditya@gmail.com>
+Date:   Fri Nov 8 14:50:31 2024 +0800
+
+    diajarin docker sama arul :D
+
+[33mcommit b43f1bfa1039b533c5b8e716a75d577d3cdb4d2a[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Fri Nov 1 00:49:08 2024 +0800
+
+    update
+
+[33mcommit fe13a6d26a615b76ae9fff2aeeb68877a8189b0b[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Fri Nov 1 00:43:39 2024 +0800
+
+    update final??
+
+[33mcommit 52e79831a0933926c1f9666f01d03a9d1662b480[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Fri Nov 1 00:36:56 2024 +0800
+
+    update
+
+[33mcommit a0ac477a603f52956735c3ac0a8f722b30116e36[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Fri Nov 1 00:36:20 2024 +0800
+
+    updaet
+
+[33mcommit c5a9d5671de04b1efbfda6b014f05287c67ddad0[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Fri Nov 1 00:34:35 2024 +0800
+
+    update daemon
+
+[33mcommit df532ca6f69c99b72c1001acfec812f7a7de4860[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Fri Nov 1 00:32:08 2024 +0800
+
+    ganti daemon
+
+[33mcommit a021f2c06e85f0e0b5b80a7fb5d7cf14f74a854c[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Fri Nov 1 00:31:13 2024 +0800
+
+    update
+
+[33mcommit 9f159ef68b1eb35093252e4b827a5f91ff83ee38[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Fri Nov 1 00:30:52 2024 +0800
+
+    update
+
+[33mcommit f2555b9709640987aea113d3a427d9f58c0867f2[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Fri Nov 1 00:30:24 2024 +0800
+
+    update
+
+[33mcommit 23fd7b74b9c9017121f533d1a4839755661928e8[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Fri Nov 1 00:29:30 2024 +0800
+
+    update
+
+[33mcommit ae9f6b97f2023955a88ab734219c7940a234e906[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 31 18:18:22 2024 +0800
+
+    daemon yang aseli 😎
+
+[33mcommit 4fd0724f1a2d55257cd9164c33937c061158c86a[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 31 18:08:17 2024 +0800
+
+    Update F1G123027-Muhammad-Rafli-Arifin.md
+
+[33mcommit ee1a70dbc08bf1914650479a3069ad3e865bdc7c[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 31 17:45:16 2024 +0800
+
+    Update F1G123027-Muhammad-Rafli-Arifin.md
+
+[33mcommit 776857f44d8c3d2bf2a4fe129d02a1a484e95c36[m
+Author: Andibrahim7 <Ibrahimkdi12345@gmail.com>
+Date:   Thu Oct 31 16:18:22 2024 +0800
+
+    Tugas daemon
+
+[33mcommit 2a0dd7f8c6e3df647932a5d49829f5696d11cddd[m
+Author: Andibrahim7 <Ibrahimkdi12345@gmail.com>
+Date:   Thu Oct 31 16:16:48 2024 +0800
+
+    update tugas daemon
+
+[33mcommit f6af7db1cc968052ed383926a9d56f0a13773217[m
+Author: Andibrahim7 <Ibrahimkdi12345@gmail.com>
+Date:   Thu Oct 31 16:14:19 2024 +0800
+
+    Tugas daemon
+
+[33mcommit da2821fc971e8f7d5b606a809660ab64b0f30bad[m
+Author: Nanaa813 <alee95514@gmail.com>
+Date:   Tue Oct 29 16:03:12 2024 +0800
+
+    modify
+
+[33mcommit 09ed56d6f3e5ac7463cfbca59f810af547f71b53[m
+Author: Nanaa813 <alee95514@gmail.com>
+Date:   Tue Oct 29 16:02:23 2024 +0800
+
+    update
+
+[33mcommit 0d2b250032e45c3695fe3dd74eafc7799799f891[m
+Author: Nanaa813 <alee95514@gmail.com>
+Date:   Tue Oct 29 16:00:32 2024 +0800
+
+    Update
+
+[33mcommit 035f52df02c614aaed4683c0c5e8482250df491c[m
+Author: Nanaa813 <alee95514@gmail.com>
+Date:   Tue Oct 29 15:58:29 2024 +0800
+
+    Daemon
+
+[33mcommit 7eff87f31d87e684f6d6f4d09c54646bce0a936b[m
+Author: Nanaa813 <alee95514@gmail.com>
+Date:   Tue Oct 29 15:31:40 2024 +0800
+
+    delete
+
+[33mcommit 89ed57dda6780c231b73857806832566fc56c5d1[m
+Author: Nanaa813 <alee95514@gmail.com>
+Date:   Tue Oct 29 15:30:33 2024 +0800
+
+    Tugas Daemon
+
+[33mcommit aac9253a2a14b571920b00eb6523c44c83937739[m
+Author: Almunajat-121 <almunajatamirul@gmail.com>
+Date:   Fri Oct 25 13:26:39 2024 +0800
+
+    Create F1G123017_Almunajat Amirul Soleh.md
+
+[33mcommit 47f4456991eaeaca0c59253b0dc50cf27ad80865[m
+Merge: cfb48e4 e98a1fc
+Author: Prasdion Aditya <prasdionaditya@gmail.com>
+Date:   Fri Oct 25 13:17:28 2024 +0800
+
+    Merge branch 'main' of https://github.com/prasdionaditya/ilkom-23-os-kelompok-8
+
+[33mcommit cfb48e4b3530906b4b685aab421638b6faf85118[m
+Author: Prasdion Aditya <prasdionaditya@gmail.com>
+Date:   Fri Oct 25 13:11:00 2024 +0800
+
+    up tugas daemon
+
+[33mcommit e98a1fc0db3f37845ddda4994b2ddeb7453673c7[m
+Author: yaya-bit-hue <ydw3110@gmail.com>
+Date:   Fri Oct 25 12:29:56 2024 +0800
+
+    Daemon
+
+[33mcommit fd6100171e9d4e640847fc77941445ac2b47c1ac[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 24 23:40:16 2024 +0800
+
+    Final Update Tugas Daemon
+
+[33mcommit 78f1b2fee02d1b55c0717f9151a48bbf3f889745[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 24 23:39:37 2024 +0800
+
+    Delete daemon/screenshots/SS-website-rafliarifin.png
+
+[33mcommit 2c244214436fc9dd7e4913f58955c67718d78b91[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 24 23:39:25 2024 +0800
+
+    Delete daemon/screenshots/SS-website2-rafliarifin.png
+
+[33mcommit 7c8f4dc7ea304c79e6a4f7c6c0fe21169ef2e7ab[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 24 23:39:12 2024 +0800
+
+    Delete daemon/screenshots/SS-website3-rafliarifin.png
+
+[33mcommit d7ad7a9e812f6ae4e2621ebd213ce96f13ecca18[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 24 23:38:39 2024 +0800
+
+    Final Update Tugas Daemon
+
+[33mcommit 0be49f02d114ab14053a92efcc76bd115529439b[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 24 23:36:12 2024 +0800
+
+    Update F1G123027-Muhammad-Rafli-Arifin.md
+
+[33mcommit 61cdd4b6cb41621470ddcd4b899a41ac58cbdb52[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 24 23:17:24 2024 +0800
+
+    Update F1G123027-Muhammad-Rafli-Arifin.md
+
+[33mcommit 3f25483545d403b0243c3938851a821928ce6933[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 24 23:16:39 2024 +0800
+
+    Update F1G123027-Muhammad-Rafli-Arifin.md
+
+[33mcommit 0be12b48ac6e6a548887e43e2028fff65baf8398[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 24 23:01:12 2024 +0800
+
+    Update F1G123027-Muhammad-Rafli-Arifin.md
+
+[33mcommit 24745a085bddec791790e1de803e906163883c8b[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 24 22:53:27 2024 +0800
+
+    Update F1G123027-Muhammad-Rafli-Arifin.md
+
+[33mcommit a2e3f0dc85685c13dc5701522ae8a08239fe9e51[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 24 22:41:26 2024 +0800
+
+    Update F1G123027-Muhammad-Rafli-Arifin.md
+
+[33mcommit 4f097245e6bb60bb3accf87df5eaafd6fb4103c2[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 24 22:40:25 2024 +0800
+
+    Update F1G123027-Muhammad-Rafli-Arifin.md
+
+[33mcommit b475668e28e7d2130a4393c85533533391502d4b[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 24 22:39:28 2024 +0800
+
+    Update F1G123027-Muhammad-Rafli-Arifin.md
+
+[33mcommit 66a1beb9e2c528201a6bc5d0537e11c9739d2255[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 24 22:38:46 2024 +0800
+
+    ubah konsep
+
+[33mcommit 637f76aa6a9616b30d796bffd9bf6838862d30d1[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 17 21:22:04 2024 +0800
+
+    Update F1G123027-Muhammad-Rafli-Arifin.md
+
+[33mcommit 06d19a2c6588b3c4b23e9e3f2a93127616a2ae15[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 17 21:18:43 2024 +0800
+
+    Delete daemon/screenshots/isigambar.txt
+
+[33mcommit 93466e293a75a5f8ee818ebc90d73add68d7e282[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 17 21:18:10 2024 +0800
+
+    Add files via upload
+    
+    Hasil Screenshot dari website untuk tugas daemon process, ~rafliarifin
+
+[33mcommit de3632922bb6ec8bd81b0ac40d8221c6287cc58d[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 17 21:17:26 2024 +0800
+
+    Create isigambar.txt
+
+[33mcommit 40661c5e9505cb10fa1dccab7bd9a9d69807dc4a[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Thu Oct 17 21:11:28 2024 +0800
+
+    Create F1G123027-Muhammad-Rafli-Arifin.md
+    
+    Tugas Menjalankan Website dengan Daemon Process
+
+[33mcommit b8a8a0d8be157204d55a605b438a5325a4406dd5[m
+Author: Andibrahim7 <Ibrahimkdi12345@gmail.com>
+Date:   Wed Oct 16 17:09:00 2024 +0800
+
+    tes cik
+
+[33mcommit 68223b24137f2538352171add87fa3e839934492[m
+Author: Andibrahim7 <ibrahimkdi12345@gmail.com>
+Date:   Fri Oct 11 13:22:08 2024 +0800
+
+    Update fungsi docker.txt
+
+[33mcommit d764600c0cc3746bf2dbff0beb338758c5355962[m
+Author: Andibrahim7 <ibrahimkdi12345@gmail.com>
+Date:   Fri Oct 11 13:21:03 2024 +0800
+
+    Add files via upload
+
+[33mcommit 3f50d2cc6b1b069f7d27832bb8605ea8e8d5d776[m
+Author: prasdionaditya <147937459+prasdionaditya@users.noreply.github.com>
+Date:   Fri Oct 11 11:32:00 2024 +0800
+
+    Add files via upload
+
+[33mcommit a8c2728b22db659289aea2add8ceb8e26a1c9565[m
+Author: Muhammad Rafli Arifin <109934384+Rafliarifin@users.noreply.github.com>
+Date:   Fri Sep 27 20:45:18 2024 +0800
+
+    Create tambah2.txt
+    
+    test commit 😞🙏
+
+[33mcommit 7c8e1a9e095775a56c57fce2aaaabb84197d9231[m
+Author: prasdionaditya <prasdionaditya@gmail.com>
+Date:   Fri Sep 27 14:23:27 2024 +0800
+
+    abis ngerapiin file heheh
+
+[33mcommit 46bfc1407ff9b630c9472f7b7561d87f8d2dedcd[m
+Merge: 8bf85e5 8dcfbd2
+Author: prasdionaditya <prasdionaditya@gmail.com>
+Date:   Fri Sep 20 14:38:01 2024 +0800
+
+    Merge branch 'main' of https://github.com/prasdionaditya/ilkom-23-os-kelompok-8
+
+[33mcommit 8bf85e5544887117276032267ccdb653ba68243a[m
+Author: prasdionaditya <prasdionaditya@gmail.com>
+Date:   Fri Sep 20 14:37:45 2024 +0800
+
+    test
+
+[33mcommit 8dcfbd2374020f6d5ba9b82e7b4162ecbd0de614[m
+Author: mriansyah93 <mriansyah93@gmail.com>
+Date:   Tue Sep 17 08:30:18 2024 +0800
+
+    add new files
+
+[33mcommit e3a1639e626db96bce71d4adf6b1e7d0d624bd3a[m
+Author: prasdionaditya <prasdionaditya@gmail.com>
+Date:   Fri Sep 13 14:43:56 2024 +0800
+
+    heheh
+
+[33mcommit 99eccf03ada49934dc75bbc57a13d6397a2e05c4[m
+Author: Nanaa813-github <alee95514@gmail.com>
+Date:   Fri Sep 13 14:33:13 2024 +0800
+
+    dari andi
+
+[33mcommit 203f4b1e7fa13c889d6244b88251d5276a5b73b3[m
+Author: mriansyah93 <mriansyah93@gmail.com>
+Date:   Fri Sep 13 14:08:32 2024 +0800
+
+    tambahkan 1 file lagi
+
+[33mcommit 9e08015cd801b83a78cfe229a517407425ccff00[m
+Author: mriansyah93 <mriansyah93@gmail.com>
+Date:   Fri Sep 13 14:07:42 2024 +0800
+
+    add docker file and docs
+
+[33mcommit 37ab9d140372ad1a4a0d49f8be0cb930b2992e90[m
+Author: mriansyah93 <mriansyah93@gmail.com>
+Date:   Fri Sep 13 14:02:44 2024 +0800
+
+    pesan pertama
