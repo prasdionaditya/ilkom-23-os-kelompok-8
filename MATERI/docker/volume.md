@@ -110,11 +110,3 @@ Kedua container dapat mengakses data yang sama melalui volume `shared-data`.
 | **Portabilitas**    | Lebih mudah dipindahkan   | Tergantung pada direktori host |
 | **Keamanan**        | Lebih aman dan terisolasi | Bergantung pada izin sistem host |
 | **Performa**        | Dioptimalkan oleh Docker  | Performa standar          |
-
----
-
-## Kesimpulan
-
-Docker Volume adalah alat penting untuk mengelola data dalam aplikasi berbasis container. Dengan volume, Anda dapat menyimpan data yang persisten, berbagi data antar container, dan mengelola data dengan lebih mudah.
-
-```
