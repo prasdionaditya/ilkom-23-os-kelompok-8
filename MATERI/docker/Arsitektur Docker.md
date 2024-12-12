@@ -9,3 +9,8 @@ Docker Engine adalah inti dari Docker yang bertugas menjalankan dan mengelola co
 - Berfungsi sebagai service yang berjalan di background.
 - Bertanggung jawab untuk membangun, menjalankan, dan mengelola container.
 - Berinteraksi dengan Docker CLI dan REST API.
+
+### b. **Docker CLI**
+- Command Line Interface (CLI) untuk pengguna berinteraksi dengan Docker.
+- Perintah seperti `docker run`, `docker build`, dan `docker ps` dikirimkan melalui CLI ke Docker Daemon.
+
