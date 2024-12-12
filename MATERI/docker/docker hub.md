@@ -15,3 +15,9 @@ Docker Hub adalah layanan repositori berbasis cloud untuk menyimpan, berbagi, da
       - Docker Hub dapat diintegrasikan dengan sistem kontrol versi seperti GitHub atau Bitbucket. Ketika ada pembaruan pada repositori kode, image akan secara otomatis dibuat dan diperbarui.
    5. Webhooks
       - Mengirim notifikasi atau memicu tindakan otomatis setelah image diunggah atau diperbarui.
+
+## **Manfaat Docker Hub**
+   - Akses Mudah ke Image: Pengguna dapat mencari dan mengunduh image dari ribuan repositori publik.
+   - Kolaborasi: Memungkinkan tim berbagi image dengan mudah.
+   - Automasi: Mendukung integrasi dengan CI/CD untuk proses build dan deploy otomatis.
+   - Keamanan: Image resmi diverifikasi dan lebih terpercaya.
