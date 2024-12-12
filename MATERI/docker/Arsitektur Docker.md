@@ -40,3 +40,9 @@ Docker menggunakan beberapa objek untuk menyusun aplikasinya:
 - Tempat penyimpanan untuk Docker Images.
 - Docker Hub adalah registry publik default.
 - Mendukung pembuatan registry privat.
+
+### Workflow Docker:
+1. **Build**: Membangun image menggunakan Dockerfile.
+2. **Push**: Mengunggah image ke registry (Docker Hub atau privat).
+3. **Pull**: Mengunduh image dari registry.
+4. **Run**: Membuat dan menjalankan container dari image.
