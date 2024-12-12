@@ -14,3 +14,17 @@ Docker menyediakan berbagai jenis jaringan untuk mendukung kebutuhan komunikasi 
   docker network inspect bridge  # Melihat detail jaringan bridge
   docker run --network bridge nginx
   ```
+
+  ## 2. **Host Network**
+- **Deskripsi**:
+  - Container menggunakan jaringan host secara langsung.
+  - Tidak ada isolasi jaringan antara container dan host.
+- **Kegunaan**:
+  - Digunakan ketika performa tinggi diperlukan atau port forwarding tidak diinginkan.
+- **Catatan**:
+  - Hanya tersedia di Linux.
+- **Contoh**:
+  ```bash
+  docker run --network host nginx
+  ``` 
+  
