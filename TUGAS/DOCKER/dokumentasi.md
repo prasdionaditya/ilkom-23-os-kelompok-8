@@ -1,19 +1,22 @@
-# Dokumentasi Proyek Docker
+# Dokumentasi Docker
 
 ## **1. Inisiasi Docker Image**
 
 ### **Langkah-langkah**
 1. **Install Docker**:
-   - Pastikan Docker telah terinstal di sistem Anda. Verifikasi instalasi dengan perintah:
+   - Memastikan bahwa Docker telah terinstal dengan  cara:
+
      ```bash
      docker --version
      ```
 
 2. **Pull Docker Image dari Docker Hub**:
    - Unduh image yang diperlukan dari Docker Hub menggunakan perintah berikut:
+
      ```bash
      docker pull [image_name:tag]
      ```
+
    - Contoh:
      ```bash
      docker pull ubuntu:latest
@@ -21,6 +24,7 @@
 
 3. **Cek Image yang Sudah Diunduh**:
    - Pastikan image telah berhasil diunduh dengan menjalankan:
+
      ```bash
      docker images
      ```
