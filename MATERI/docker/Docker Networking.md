@@ -27,4 +27,15 @@ Docker menyediakan berbagai jenis jaringan untuk mendukung kebutuhan komunikasi 
   ```bash
   docker run --network host nginx
   ``` 
+
+  ## 3. **None Network**
+- **Deskripsi**:
+  - Container tidak terhubung ke jaringan apapun.
+  - Container tetap aktif tetapi tidak memiliki akses jaringan.
+- **Kegunaan**:
+  - Digunakan untuk menjalankan aplikasi yang tidak membutuhkan jaringan.
+- **Contoh**:
+  ```bash
+  docker run --network none nginx
+  ```
   
