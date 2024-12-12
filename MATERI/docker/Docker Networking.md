@@ -80,3 +80,7 @@ Docker menyediakan berbagai jenis jaringan untuk mendukung kebutuhan komunikasi 
    ```bash
    docker network ls
    ```
+2. **Membuat Jaringan Baru**:
+   ```bash
+   docker network create <network_name>
+   ```
