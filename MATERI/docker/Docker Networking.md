@@ -88,3 +88,6 @@ Docker menyediakan berbagai jenis jaringan untuk mendukung kebutuhan komunikasi 
    ```bash
    docker network rm <network_name>
    ```
+4. **Detail Jaringan**:
+   ```bash
+   docker network inspect <network_name>
