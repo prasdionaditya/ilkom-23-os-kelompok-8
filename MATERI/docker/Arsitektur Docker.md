@@ -46,3 +46,5 @@ Docker menggunakan beberapa objek untuk menyusun aplikasinya:
 2. **Push**: Mengunggah image ke registry (Docker Hub atau privat).
 3. **Pull**: Mengunduh image dari registry.
 4. **Run**: Membuat dan menjalankan container dari image.
+
+---
