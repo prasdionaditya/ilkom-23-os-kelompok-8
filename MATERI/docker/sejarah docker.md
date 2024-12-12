@@ -8,3 +8,4 @@ Sebelumnya, **dotCloud** sendiri merupakan platform layanan cloud yang menggunak
    Mereka menyadari potensi besar dari teknologi ini dan mulai mengembangkannya secara internal.
    - **Maret 2013**: **dotCloud** merilis Docker sebagai perangkat lunak open-source.
    Docker Engine, perangkat lunak yang meng-host kontainer, juga diluncurkan pada tahun yang sama.
+   - **2014**: 
