@@ -21,3 +21,7 @@ Docker Hub adalah layanan repositori berbasis cloud untuk menyimpan, berbagi, da
    - Kolaborasi: Memungkinkan tim berbagi image dengan mudah.
    - Automasi: Mendukung integrasi dengan CI/CD untuk proses build dan deploy otomatis.
    - Keamanan: Image resmi diverifikasi dan lebih terpercaya.
+
+## **Menggunakan Docker Hub**
+   1. Login ke Docker Hub
+   Untuk mulai menggunakan Docker Hub, Anda harus masuk menggunakan akun Docker:
