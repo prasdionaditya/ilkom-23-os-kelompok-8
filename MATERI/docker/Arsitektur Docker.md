@@ -18,3 +18,6 @@ Docker Engine adalah inti dari Docker yang bertugas menjalankan dan mengelola co
 - API yang memungkinkan aplikasi untuk berkomunikasi dengan Docker Daemon.
 - Digunakan oleh Docker CLI dan alat lain untuk mengirim perintah ke Docker.
 
+## 2. **Docker Objects**
+Docker menggunakan beberapa objek untuk menyusun aplikasinya:
+
