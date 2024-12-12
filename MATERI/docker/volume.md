@@ -1,7 +1,4 @@
-Berikut adalah penjelasan tentang **Docker Volume** dalam format Markdown:
-
-```markdown
-# Docker Volume
+# **Docker Volume**
 
 Docker Volume adalah mekanisme untuk menyimpan data di luar container. Volume memungkinkan data tetap ada meskipun container dihentikan atau dihapus, sehingga sangat berguna untuk penyimpanan data yang tahan lama.
 
