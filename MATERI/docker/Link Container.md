@@ -40,3 +40,5 @@ Satu container dapat terhubung ke lebih dari satu jaringan.
   docker network connect network1 my_container
   docker network connect network2 my_container
   ```
+
+  
