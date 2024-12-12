@@ -31,3 +31,4 @@ Gunakan perintah `docker inspect` untuk memeriksa jaringan yang terhubung ke con
   ```
 
 ## 5. **Menghubungkan Banyak Jaringan**
+Satu container dapat terhubung ke lebih dari satu jaringan.
