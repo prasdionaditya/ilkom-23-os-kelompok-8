@@ -32,3 +32,6 @@ Gunakan perintah `docker inspect` untuk memeriksa jaringan yang terhubung ke con
 
 ## 5. **Menghubungkan Banyak Jaringan**
 Satu container dapat terhubung ke lebih dari satu jaringan.
+- **Langkah**:
+  1. Buat container tanpa jaringan khusus (atau gunakan jaringan default).
+  2. Gunakan `docker network connect` untuk menambahkan container ke jaringan lain.
