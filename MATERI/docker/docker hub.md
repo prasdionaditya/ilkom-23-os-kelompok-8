@@ -28,4 +28,29 @@ Docker Hub adalah layanan repositori berbasis cloud untuk menyimpan, berbagi, da
    ```bash
    docker login
    ```
-   
+   2. Mencari Image
+   Untuk mencari image yang tersedia di Docker Hub:
+   ```bash
+   docker search nginx
+   ```
+   3. Mengunduh Image
+   Untuk mengunduh image dari Docker Hub:
+   ```bash
+   docker pull nginx
+   ```
+   Image ini akan disimpan di mesin lokal Anda.
+   4. Mengunggah Image
+   Jika Anda membuat image sendiri dan ingin mengunggahnya ke Docker Hub:
+      1. Beri tag image dengan nama repositori Anda:
+      ```bash
+      docker tag my-image username/my-repo
+      ```
+      2. Unggah image ke Docker Hub:
+      ```bash
+      docker push username/my-repo
+      ```
+   5. Membuat Repositori
+   Anda bisa membuat repositori baru langsung di situs Docker Hub:
+   - Masuk ke Docker Hub.
+   - Klik Create Repository.
+   - Tentukan nama repositori dan visibilitasnya (publik/privat).
