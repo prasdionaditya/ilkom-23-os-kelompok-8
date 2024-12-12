@@ -29,3 +29,5 @@ Gunakan perintah `docker inspect` untuk memeriksa jaringan yang terhubung ke con
   ```bash
   docker inspect <container_name> | grep Network
   ```
+
+## 5. **Menghubungkan Banyak Jaringan**
