@@ -12,3 +12,4 @@ Sebelumnya, **dotCloud** sendiri merupakan platform layanan cloud yang menggunak
    Banyak perusahaan mulai menggunakan Docker untuk membangun dan menjalankan aplikasi mereka.
    - **2015**: Docker, Inc. didirikan untuk mengelola pengembangan dan komersialisasi Docker.
    - **2016**: Docker menjadi platform kontainer yang paling banyak digunakan di dunia.
+   - **2017**: 
