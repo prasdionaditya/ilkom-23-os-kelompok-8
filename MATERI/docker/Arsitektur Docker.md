@@ -36,3 +36,7 @@ Docker menggunakan beberapa objek untuk menyusun aplikasinya:
 ### d. **Networks**
 - Digunakan untuk menghubungkan container satu sama lain atau dengan dunia luar.
 
+## 3. **Docker Registry**
+- Tempat penyimpanan untuk Docker Images.
+- Docker Hub adalah registry publik default.
+- Mendukung pembuatan registry privat.
