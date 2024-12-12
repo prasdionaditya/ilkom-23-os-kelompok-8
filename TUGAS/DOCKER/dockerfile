@@ -1,0 +1,10 @@
+# Gunakan image nginx resmi
+FROM nginx:alpine
+
+# Salin file HTML ke direktori default nginx
+COPY ./src /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80
+
+# Nginx akan otomatis menjalankan server web
