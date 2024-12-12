@@ -14,4 +14,4 @@ Sebelumnya, **dotCloud** sendiri merupakan platform layanan cloud yang menggunak
    - **2016**: Docker menjadi platform kontainer yang paling banyak digunakan di dunia.
    - **2017**: Docker merilis Docker Swarm, sebuah alat untuk mengelola cluster kontainer.
    - **2018**: Docker merilis Docker Hub, sebuah platform untuk berbagi dan mengelola image kontainer.
-   - **2019**:.
+   - **2019**:. Docker terus berkembang dan menjadi platform kontainer yang sangat matang.
