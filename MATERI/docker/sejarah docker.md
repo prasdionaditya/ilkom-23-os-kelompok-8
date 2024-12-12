@@ -6,3 +6,4 @@ Sebelumnya, **dotCloud** sendiri merupakan platform layanan cloud yang menggunak
 ## **Perjalanan Docker:**
    - **2010-2012**: **dotCloud** mengembangkan teknologi kontainer yang menjadi dasar Docker.
    Mereka menyadari potensi besar dari teknologi ini dan mulai mengembangkannya secara internal.
+   - **Maret 2013**: **dotCloud** merilis Docker sebagai perangkat lunak open-source.
