@@ -71,3 +71,27 @@ Linux tersedia dalam berbagai distribusi, yang dikenal sebagai **distro**, yang 
 - **Kali Linux**  
   Distro yang dirancang untuk pengujian penetrasi dan keamanan siber.
 
+
+Kenapa Memilih Linux?
+Gratis dan Hemat Biaya: Tidak memerlukan lisensi, sepenuhnya gratis.
+Keamanan Tinggi: Sistem izin file ketat, pembaruan rutin.
+Fleksibel dan Dapat Dikustomisasi: Dapat disesuaikan dengan kebutuhan pengguna.
+Komunitas Aktif: Mudah menemukan dukungan dan solusi.
+Kompatibel dengan Perangkat Lama: Dapat memperpanjang masa pakai komputer.
+Perangkat Lunak Beragam: Banyak opsi perangkat lunak open-source.
+Memulai dengan Linux
+Pilih Distribusi: Unduh Ubuntu, Fedora, atau Linux Mint.
+Coba Live Mode: Jalankan dari USB tanpa instalasi.
+Instalasi: Gunakan USB atau mesin virtual seperti VirtualBox.
+Sumber Daya Tambahan
+Kernel Linux
+DistroWatch
+Buku: How Linux Works - Brian Ward
+Komunitas: r/linux
+Linux adalah solusi fleksibel untuk berbagai kebutuhan, dari desktop hingga server.
+
+
+
+
+
+
