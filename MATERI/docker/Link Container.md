@@ -8,3 +8,10 @@ Anda dapat langsung menentukan jaringan saat membuat container menggunakan opsi 
   ```bash
   docker run --network <network_name> --name my_container nginx
   ```
+
+## 2. **Menghubungkan Container ke Jaringan yang Ada**
+Jika container sudah dibuat, Anda dapat menambahkan container ke jaringan yang ada menggunakan perintah `docker network connect`.
+- **Contoh**:
+  ```bash
+  docker network connect <network_name> <container_name>
+  ```
