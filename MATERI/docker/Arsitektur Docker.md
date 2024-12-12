@@ -7,3 +7,5 @@ Docker Engine adalah inti dari Docker yang bertugas menjalankan dan mengelola co
 
 ### a. **Docker Daemon (dockerd)**
 - Berfungsi sebagai service yang berjalan di background.
+- Bertanggung jawab untuk membangun, menjalankan, dan mengelola container.
+- Berinteraksi dengan Docker CLI dan REST API.
