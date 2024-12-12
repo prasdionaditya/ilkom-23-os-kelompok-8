@@ -32,3 +32,7 @@ Docker menggunakan beberapa objek untuk menyusun aplikasinya:
 ### c. **Volumes**
 - Penyimpanan data persisten untuk container.
 - Digunakan untuk menjaga data tetap ada meskipun container dihapus.
+
+### d. **Networks**
+- Digunakan untuk menghubungkan container satu sama lain atau dengan dunia luar.
+
