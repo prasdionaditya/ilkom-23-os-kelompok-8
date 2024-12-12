@@ -28,3 +28,7 @@ Docker menggunakan beberapa objek untuk menyusun aplikasinya:
 ### b. **Containers**
 - Instance yang berjalan dari image.
 - Container adalah tempat aplikasi Anda berjalan.
+
+### c. **Volumes**
+- Penyimpanan data persisten untuk container.
+- Digunakan untuk menjaga data tetap ada meskipun container dihapus.
