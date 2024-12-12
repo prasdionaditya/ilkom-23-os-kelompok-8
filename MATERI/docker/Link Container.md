@@ -24,3 +24,8 @@ Untuk memutuskan container dari jaringan, gunakan perintah `docker network disco
   ```
 
 ## 4. **Memeriksa Koneksi Jaringan pada Container**
+Gunakan perintah `docker inspect` untuk memeriksa jaringan yang terhubung ke container.
+- **Contoh**:
+  ```bash
+  docker inspect <container_name> | grep Network
+  ```
