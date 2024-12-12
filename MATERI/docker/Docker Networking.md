@@ -74,3 +74,20 @@ Docker menyediakan berbagai jenis jaringan untuk mendukung kebutuhan komunikasi 
   docker network create my_custom_network
   docker run --network my_custom_network nginx
   ```
+
+  ## Perintah Umum untuk Jaringan Docker
+1. **Melihat Daftar Jaringan**:
+   ```bash
+   docker network ls
+   ```
+2. **Membuat Jaringan Baru**:
+   ```bash
+   docker network create <network_name>
+   ```
+3. **Menghapus Jaringan**:
+   ```bash
+   docker network rm <network_name>
+   ```
+4. **Detail Jaringan**:
+   ```bash
+   docker network inspect <network_name>
