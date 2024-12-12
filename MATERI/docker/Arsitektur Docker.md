@@ -15,3 +15,6 @@ Docker Engine adalah inti dari Docker yang bertugas menjalankan dan mengelola co
 - Perintah seperti `docker run`, `docker build`, dan `docker ps` dikirimkan melalui CLI ke Docker Daemon.
 
 ### c. **Docker REST API**
+- API yang memungkinkan aplikasi untuk berkomunikasi dengan Docker Daemon.
+- Digunakan oleh Docker CLI dan alat lain untuk mengirim perintah ke Docker.
+
