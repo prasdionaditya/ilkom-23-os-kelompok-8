@@ -25,3 +25,7 @@ Docker Hub adalah layanan repositori berbasis cloud untuk menyimpan, berbagi, da
 ## **Menggunakan Docker Hub**
    1. Login ke Docker Hub
    Untuk mulai menggunakan Docker Hub, Anda harus masuk menggunakan akun Docker:
+   ```bash
+   docker login
+   ```
+   
