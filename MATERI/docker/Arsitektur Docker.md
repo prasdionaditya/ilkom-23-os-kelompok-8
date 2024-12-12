@@ -24,3 +24,7 @@ Docker menggunakan beberapa objek untuk menyusun aplikasinya:
 ### a. **Images**
 - Template read-only untuk membuat container.
 - Dibangun menggunakan Dockerfile.
+
+### b. **Containers**
+- Instance yang berjalan dari image.
+- Container adalah tempat aplikasi Anda berjalan.
