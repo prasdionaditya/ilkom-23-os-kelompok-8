@@ -27,4 +27,27 @@ Docker menyediakan berbagai jenis jaringan untuk mendukung kebutuhan komunikasi 
   ```bash
   docker run --network host nginx
   ``` 
+
+  ## 3. **None Network**
+- **Deskripsi**:
+  - Container tidak terhubung ke jaringan apapun.
+  - Container tetap aktif tetapi tidak memiliki akses jaringan.
+- **Kegunaan**:
+  - Digunakan untuk menjalankan aplikasi yang tidak membutuhkan jaringan.
+- **Contoh**:
+  ```bash
+  docker run --network none nginx
+  ```
+
+  ## 4. **Overlay Network**
+- **Deskripsi**:
+  - Digunakan untuk menghubungkan container yang berjalan di beberapa host dalam cluster Docker Swarm.
+  - Membutuhkan orkestrasi seperti Docker Swarm atau Kubernetes.
+- **Kegunaan**:
+  - Komunikasi antar-container di berbagai host.
+- **Contoh**:
+  ```bash
+  docker network create -d overlay my_overlay_network
+  docker service create --network my_overlay_network nginx
+  ```
   
