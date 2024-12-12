@@ -21,3 +21,6 @@ Docker Engine adalah inti dari Docker yang bertugas menjalankan dan mengelola co
 ## 2. **Docker Objects**
 Docker menggunakan beberapa objek untuk menyusun aplikasinya:
 
+### a. **Images**
+- Template read-only untuk membuat container.
+- Dibangun menggunakan Dockerfile.
