@@ -15,3 +15,10 @@ Jika container sudah dibuat, Anda dapat menambahkan container ke jaringan yang a
   ```bash
   docker network connect <network_name> <container_name>
   ```
+
+  ## 3. **Memutuskan Container dari Jaringan**
+Untuk memutuskan container dari jaringan, gunakan perintah `docker network disconnect`.
+- **Contoh**:
+  ```bash
+  docker network disconnect <network_name> <container_name>
+  ```
