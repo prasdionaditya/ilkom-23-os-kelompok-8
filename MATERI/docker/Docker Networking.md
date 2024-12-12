@@ -50,4 +50,17 @@ Docker menyediakan berbagai jenis jaringan untuk mendukung kebutuhan komunikasi 
   docker network create -d overlay my_overlay_network
   docker service create --network my_overlay_network nginx
   ```
+
+  ## 5. **Macvlan Network**
+- **Deskripsi**:
+  - Memberikan container alamat MAC unik dan memperlakukannya seperti perangkat fisik di jaringan.
+  - Container dapat berkomunikasi langsung dengan jaringan fisik.
+- **Kegunaan**:
+  - Digunakan untuk integrasi yang lebih erat dengan jaringan fisik.
+- **Contoh**:
+  ```bash
+  docker network create -d macvlan --subnet=192.168.1.0/24 my_macvlan
+  docker run --network my_macvlan nginx
+  ```
+
   
