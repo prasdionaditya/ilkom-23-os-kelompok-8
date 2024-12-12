@@ -1,171 +1,152 @@
-# Dokumentasi Docker
+# Cara Menggunakan Menggunakan Docker melalui WSL (Windows Subsystem for Linux)
 
-## **1. Inisiasi Docker Image**
-
-### **Langkah-langkah**
-1. **Install Docker**:
-   - Memastikan bahwa Docker telah terinstal dengan  cara:
-
-     ```bash
-     docker --version
-     ```
-
-2. **Pull Docker Image dari Docker Hub**:
-   - Unduh image yang diperlukan dari Docker Hub menggunakan perintah berikut:
-
-     ```bash
-     docker pull [image_name:tag]
-     ```
-
-   - Contoh:
-     ```bash
-     docker pull ubuntu:latest
-     ```
-
-3. **Cek Image yang Sudah Diunduh**:
-   - Pastikan image telah berhasil diunduh dengan menjalankan:
-
-     ```bash
-     docker images
-     ```
+Dokumentasi ini mencakup langkah-langkah konfigurasi Docker menggunakan WSL, termasuk inisiasi Docker image, menjalankan container, serta langkah-langkah bedah container dan optimasi resource.
 
 ---
 
-## **2. Menjalankan Container (Running Container)**
+## 1. Inisiasi Docker Image Menggunakan Dockerfile
 
-### **Langkah-langkah**
-1. **Menjalankan Container Baru**:
-   - Jalankan container dari image dengan perintah berikut:
-     ```bash
-     docker run -it --name [container_name] [image_name]
-     ```
-   - Contoh:
-     ```bash
-     docker run -it --name my_ubuntu_container ubuntu
-     ```
+Untuk membuat Docker image menggunakan Dockerfile, ikuti langkah-langkah berikut:
 
-2. **Melihat Daftar Container yang Sedang Berjalan**:
-   - Tampilkan daftar container aktif dengan:
-     ```bash
-     docker ps
-     ```
+### **Langkah 1: Install Docker pada WSL**
+1. **Install Docker di WSL**:
+   - Pastikan Anda sudah menginstal WSL 2 dan mengonfigurasi distribusi Linux yang sesuai.
+   - Instal Docker Desktop untuk Windows melalui https://www.docker.com, yang akan mengintegrasikan Docker dengan WSL.
+   
+2. **Verifikasi Instalasi**:
+   Jalankan perintah berikut untuk memverifikasi apakah Docker sudah terinstal dan berjalan:
+   ```bash
+   docker --version
+   ```
+   Output:
 
-3. **Melihat Semua Container (Termasuk yang Berhenti)**:
-   - Gunakan perintah berikut untuk melihat semua container:
-     ```bash
-     docker ps -a
-     ```
+   ![deskripsi](screenshots/docker-version.png)
 
-4. **Menghentikan Container**:
-   - Hentikan container yang sedang berjalan dengan:
-     ```bash
-     docker stop [container_id/container_name]
-     ```
+### **Langkah 2: Membuat Dockerfile**
+1. **Buat sebuah direktori baru untuk proyek Docker Anda**:
+   ```bash
+   mkdir my-docker-project
+   cd my-docker-project
+   ```
 
-5. **Menghapus Container**:
-   - Hapus container yang tidak diperlukan dengan perintah:
-     ```bash
-     docker rm [container_id/container_name]
-     ```
+2. **Buat file `Dockerfile`**:
+   Di dalam direktori proyek, buat file bernama `Dockerfile` dengan cara:
+   ```bash
+   touch Dockerfile
+   ```
+   Setelah itu, edit Dockerfile tersebut dengan cara:
+   ```bash
+   nano Dockerfile
+   ```
+   setelah masuk ke dalam editor, isi file `Dockerfile` sesuai kebutuhan project, contohnya sebagai berikut:
+   ```dockerfile
+   #Gunakan PHP 8.2 dengan Apache
+    FROM php:8.2-apache
 
----
+    #Salin file PHP ke direktori yang sesuai di dalam container
+    COPY ./php /var/www/html
 
-## **3. Bedah Container**
+    #Expose port 80 untuk Apache
+    EXPOSE 80
+   ```
+    Output:
 
-### **Langkah-langkah**
-1. **Masuk ke dalam Container**:
-   - Untuk masuk ke dalam container yang sedang berjalan, gunakan:
-     ```bash
-     docker exec -it [container_name] /bin/bash
-     ```
-
-2. **Memeriksa Struktur File di Dalam Container**:
-   - Contoh perintah eksplorasi:
-     ```bash
-     ls /dev/
-     cat /etc/os-release
-     df -h
-     free -m
-     ps aux
-     ```
-
-3. **Keluar dari Container**:
-   - Untuk keluar dari container, cukup ketikkan:
-     ```bash
-     exit
-     ```
+    ![editdockerfile](screenshots/edit-dockerfile.png)
+### **Langkah 3: Membangun Docker Image**
+Setelah Dockerfile selesai dibuat, bangun image dengan perintah:
+```bash
+docker build -t my-ubuntu-image .
+```
+Perintah ini akan membaca Dockerfile dan membuat image baru dengan nama `my-ubuntu-image`.
 
 ---
 
-## **4. Optimasi Resources**
+## 2. Menjalankan Container dari Docker Image
 
-### **Langkah-langkah**
-1. **Membatasi CPU dan Memori**:
-   - Batasi penggunaan CPU dan memori dengan opsi `--cpus` dan `--memory`:
-     ```bash
-     docker run -it --name [container_name] --cpus="1.0" --memory="512m" [image_name]
-     ```
+Untuk menjalankan container dari image yang telah dibuat, gunakan perintah `docker run`:
 
-2. **Membersihkan Resources yang Tidak Digunakan**:
-   - Hapus container yang tidak digunakan:
-     ```bash
-     docker rm [container_id/container_name]
-     ```
-   - Hapus image yang tidak diperlukan:
-     ```bash
-     docker rmi [image_name]
-     ```
-   - Bersihkan semua resource yang tidak diperlukan:
-     ```bash
-     docker system prune -a
-     ```
+### **Langkah 1: Menjalankan Container**
+Jalankan container menggunakan perintah berikut:
+```bash
+docker run -it my-ubuntu-image
+```
+Perintah ini akan menjalankan container dalam mode interaktif (`-it`) dan memulai shell `bash` di dalam container. Anda bisa mulai bekerja di dalamnya.
 
-3. **Monitoring Resources**:
-   - Pantau penggunaan sumber daya container dengan:
-     ```bash
-     docker stats
-     ```
-
----
-
-## **5. Output Tugas yang Diharapkan**
-
-### **GitHub Project**
-- Sebuah repositori GitHub yang berisi:
-  - Dockerfile untuk membangun image kustom.
-  - File dokumentasi ini.
-  - Screenshot dari hasil percobaan menggunakan Docker.
-
-### **Dockerfile**
-Contoh sederhana Dockerfile:
-```dockerfile
-# Menggunakan image Ubuntu
-FROM ubuntu:latest
-
-# Menambahkan informasi pemelihara
-LABEL maintainer="email@example.com"
-
-# Menginstal package dasar
-RUN apt-get update && apt-get install -y \
-    curl \
-    vim \
-    git && \
-    apt-get clean
-
-# Menentukan command default
-CMD ["/bin/bash"]
+### **Langkah 2: Memverifikasi Container yang Berjalan**
+Untuk memverifikasi apakah container sedang berjalan, gunakan:
+```bash
+docker ps
 ```
 
-### **Screenshot**
-- Tambahkan file screenshot hasil percobaan ke dalam repositori.
-  - Contoh screenshot:
-    - Output dari `docker ps`.
-    - Output dari `docker stats`.
-    - Struktur file dalam container menggunakan `ls`.
+---
+
+## 3. Bedah Container
+
+Berikut adalah beberapa command yang bisa digunakan untuk "bedah" container dan mengeksplorasi file-system atau konfigurasi di dalamnya:
+
+### **1. Melihat Daftar Perangkat di `/dev/`**
+Untuk melihat daftar perangkat yang tersedia di dalam container, jalankan:
+```bash
+docker exec -it [container_id] ls /dev/
+```
+
+### **2. Melihat Versi Sistem Operasi**
+Untuk melihat informasi tentang distribusi Linux yang digunakan dalam container, jalankan:
+```bash
+docker exec -it [container_id] cat /etc/os-release
+```
+
+### **3. Menampilkan Informasi Kernel**
+Untuk melihat informasi kernel dari container, jalankan:
+```bash
+docker exec -it [container_id] uname -a
+```
+
+### **4. Melihat Konfigurasi Jaringan**
+Untuk memeriksa konfigurasi jaringan dalam container:
+```bash
+docker exec -it [container_id] ifconfig
+```
+
+### **5. Melihat Proses yang Sedang Berjalan**
+Untuk melihat daftar proses yang sedang berjalan dalam container:
+```bash
+docker exec -it [container_id] ps aux
+```
 
 ---
 
-Jika ada bagian yang perlu diperbaiki atau ditambahkan, silakan beri masukan!
+## 4. Optimasi Resources
 
+Docker memungkinkan pengaturan penggunaan resource seperti CPU dan memori agar lebih efisien. Berikut adalah beberapa cara untuk mengoptimalkan resource saat menjalankan container:
 
-![deskripsi](lampiran/test.png)
+### **1. Membatasi Penggunaan CPU**
+Anda bisa membatasi jumlah CPU yang digunakan oleh container menggunakan flag `--cpus`:
+```bash
+docker run -it --cpus="1.5" my-ubuntu-image
+```
+Perintah ini akan membatasi container untuk hanya menggunakan 1.5 core CPU.
+
+### **2. Membatasi Penggunaan Memori**
+Gunakan flag `--memory` untuk membatasi penggunaan memori:
+```bash
+docker run -it --memory="1g" my-ubuntu-image
+```
+Perintah ini akan membatasi container untuk menggunakan maksimum 1GB memori.
+
+### **3. Menyesuaikan Swap Memory**
+Untuk membatasi penggunaan swap memory, gunakan flag `--memory-swap`:
+```bash
+docker run -it --memory="1g" --memory-swap="2g" my-ubuntu-image
+```
+Perintah ini akan membatasi penggunaan memori fisik hingga 1GB dan swap hingga 2GB.
+
+### **4. Menetapkan Prioritas I/O**
+Untuk membatasi penggunaan I/O disk, gunakan flag `--blkio-weight`:
+```bash
+docker run -it --blkio-weight=500 my-ubuntu-image
+```
+Perintah ini menetapkan prioritas I/O container, di mana nilai lebih tinggi berarti lebih banyak prioritas.
+
+---
+
