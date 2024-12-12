@@ -1,4 +1,4 @@
-# Apa itu Linux?
+   # Apa itu Linux?
 
 Linux adalah sistem operasi **open-source** yang berbasis pada **kernel Linux**, yang pertama kali dikembangkan oleh **Linus Torvalds** pada tahun 1991. Kernel ini bertindak sebagai inti dari sistem operasi yang mengelola perangkat keras dan sumber daya komputer, seperti CPU, memori, dan perangkat input/output.
 

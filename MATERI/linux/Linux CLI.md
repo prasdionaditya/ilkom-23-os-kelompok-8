@@ -1,4 +1,4 @@
-### **Konsep Linux CLI untuk Laptop bagi Pemula**
+  ### **Konsep Linux CLI untuk Laptop bagi Pemula**
 
 Linux Command Line Interface (CLI) adalah antarmuka berbasis teks yang memungkinkan pengguna untuk berinteraksi dengan sistem operasi Linux menggunakan perintah yang diketik di terminal atau konsol. Meskipun banyak distribusi Linux modern menyediakan antarmuka grafis (GUI), CLI tetap menjadi alat yang sangat kuat, terutama bagi pengguna yang ingin memiliki kontrol lebih besar atas sistem mereka.
 
