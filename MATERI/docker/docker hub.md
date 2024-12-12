@@ -40,6 +40,7 @@ Docker Hub adalah layanan repositori berbasis cloud untuk menyimpan, berbagi, da
    ```
    Image ini akan disimpan di mesin lokal Anda.
    4. Mengunggah Image
+   ```
    Jika Anda membuat image sendiri dan ingin mengunggahnya ke Docker Hub:
        1. Beri tag image dengan nama repositori Anda:
        ```bash
