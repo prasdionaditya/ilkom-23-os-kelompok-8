@@ -22,3 +22,5 @@ Untuk memutuskan container dari jaringan, gunakan perintah `docker network disco
   ```bash
   docker network disconnect <network_name> <container_name>
   ```
+
+## 4. **Memeriksa Koneksi Jaringan pada Container**
