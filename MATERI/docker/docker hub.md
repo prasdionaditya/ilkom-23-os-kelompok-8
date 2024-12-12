@@ -7,7 +7,7 @@ Docker Hub adalah layanan repositori berbasis cloud untuk menyimpan, berbagi, da
       - Publik: Dapat diakses oleh semua pengguna Docker. Cocok untuk berbagi image open-source.
       - Privat: Hanya dapat diakses oleh pengguna atau tim tertentu. Cocok untuk aplikasi internal.
    2. Image Resmi (Official Images)
-      - Docker Hub menyediakan image resmi yang dikelola oleh Docker atau vendor pihak ketiga (seperti nginx, mysql, python).
+      - Docker Hub menyediakan image resmi yang dikelola oleh Docker atau vendor pihak ketiga (seperti `nginx`, `mysql`, `python`).
       - Image ini telah diuji dan dianggap aman untuk digunakan.
    3. Organisasi dan Tim
       - Fitur ini memungkinkan pengelolaan kolaboratif repositori dengan akses berbasis peran untuk tim dalam organisasi.
