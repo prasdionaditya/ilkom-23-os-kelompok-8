@@ -6,3 +6,4 @@ Docker memiliki arsitektur yang terdiri dari beberapa komponen utama yang bekerj
 Docker Engine adalah inti dari Docker yang bertugas menjalankan dan mengelola container. Docker Engine terdiri dari tiga komponen utama:
 
 ### a. **Docker Daemon (dockerd)**
+- Berfungsi sebagai service yang berjalan di background.
