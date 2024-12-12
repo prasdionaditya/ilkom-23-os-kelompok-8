@@ -1,10 +1,8 @@
-# Gunakan image nginx resmi
-FROM nginx:alpine
+#Gunakan PHP 8.2 dengan Apache
+FROM php:8.2-apache
 
-# Salin file HTML ke direktori default nginx
-COPY ./src /usr/share/nginx/html
+#Salin file PHP ke direktori yang sesuai di dalam container
+COPY ./php /var/www/html
 
-# Expose port 80
+#Expose port 80 untuk Apache
 EXPOSE 80
-
-# Nginx akan otomatis menjalankan server web

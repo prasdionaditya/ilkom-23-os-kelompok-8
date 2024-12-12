@@ -6,6 +6,6 @@
 
 **Output dari tugas yang diharapkan**
 1. Sebuah Github project ✅
-2. Dockerfile
-3. File dokumentasi (ekstensi .md atau .txt)
+2. Dockerfile ✅
+3. File dokumentasi (ekstensi .md atau .txt) ✅
 4. File screenshot dari percobaan menggunakan docker
