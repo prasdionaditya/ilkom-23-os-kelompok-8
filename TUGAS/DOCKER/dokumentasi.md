@@ -52,101 +52,113 @@ Untuk membuat Docker image menggunakan Dockerfile, ikuti langkah-langkah berikut
     Output:
 
     ![editdockerfile](screenshots/edit-dockerfile.png)
-### **Langkah 3: Membangun Docker Image**
-Setelah Dockerfile selesai dibuat, bangun image dengan perintah:
-```bash
-docker build -t my-ubuntu-image .
-```
-Perintah ini akan membaca Dockerfile dan membuat image baru dengan nama `my-ubuntu-image`.
+    Setelah mengisikan Dockerfile dengan kode di atas, simpan perubahannya dengan menekan `ctrl+o`, tekan `enter` untuk konfirmasi, lalu tekan `ctrl+x` untuk kembali ke menu utama.
+
+3. **Buat file `index.php`:**
+   ```bash
+   mkdir php
+   cd php
+   touch index.php
+   ```
+
+4. **Isi file `index.php` dengan kode berikut:**
+   ```php
+   <?php
+   echo "Hello, World from Docker!";
+   ?>
+   ```
+
+5. **Build Docker image:**
+   ```bash
+   docker build -t hello-world-php .
+   ```
 
 ---
 
-## 2. Menjalankan Container dari Docker Image
+## 2. Running Container
 
-Untuk menjalankan container dari image yang telah dibuat, gunakan perintah `docker run`:
+### **Langkah-langkah:**
+1. Jalankan container menggunakan image yang telah dibuat:
+   ```bash
+   docker run -d -p 8080:80 --name hello-world-container hello-world-php
+   ```
 
-### **Langkah 1: Menjalankan Container**
-Jalankan container menggunakan perintah berikut:
-```bash
-docker run -it my-ubuntu-image
-```
-Perintah ini akan menjalankan container dalam mode interaktif (`-it`) dan memulai shell `bash` di dalam container. Anda bisa mulai bekerja di dalamnya.
+2. Verifikasi apakah container berjalan:
+   ```bash
+   docker ps
+   ```
 
-### **Langkah 2: Memverifikasi Container yang Berjalan**
-Untuk memverifikasi apakah container sedang berjalan, gunakan:
-```bash
-docker ps
-```
+3. Buka browser atau gunakan `curl` untuk memeriksa aplikasi:
+   ```bash
+   curl http://localhost:8080
+   ```
+   Hasilnya akan menampilkan: `Hello, World from Docker!`
 
 ---
 
 ## 3. Bedah Container
 
-Berikut adalah beberapa command yang bisa digunakan untuk "bedah" container dan mengeksplorasi file-system atau konfigurasi di dalamnya:
+### **Command yang Digunakan:**
 
-### **1. Melihat Daftar Perangkat di `/dev/`**
-Untuk melihat daftar perangkat yang tersedia di dalam container, jalankan:
-```bash
-docker exec -it [container_id] ls /dev/
-```
+1. **List perangkat di `/dev/`**:
+   ```bash
+   docker exec hello-world-container ls /dev/
+   ```
 
-### **2. Melihat Versi Sistem Operasi**
-Untuk melihat informasi tentang distribusi Linux yang digunakan dalam container, jalankan:
-```bash
-docker exec -it [container_id] cat /etc/os-release
-```
+2. **Informasi tentang OS dalam container**:
+   ```bash
+   docker exec hello-world-container cat /etc/os-release
+   ```
 
-### **3. Menampilkan Informasi Kernel**
-Untuk melihat informasi kernel dari container, jalankan:
-```bash
-docker exec -it [container_id] uname -a
-```
+3. **Melihat struktur direktori root container**:
+   ```bash
+   docker exec hello-world-container ls -l /
+   ```
 
-### **4. Melihat Konfigurasi Jaringan**
-Untuk memeriksa konfigurasi jaringan dalam container:
-```bash
-docker exec -it [container_id] ifconfig
-```
+4. **Melihat file di direktori web server**:
+   ```bash
+   docker exec hello-world-container ls -l /var/www/html
+   ```
 
-### **5. Melihat Proses yang Sedang Berjalan**
-Untuk melihat daftar proses yang sedang berjalan dalam container:
-```bash
-docker exec -it [container_id] ps aux
-```
+5. **Memeriksa proses yang berjalan**:
+   ```bash
+   docker exec hello-world-container ps aux
+   ```
 
 ---
 
 ## 4. Optimasi Resources
 
-Docker memungkinkan pengaturan penggunaan resource seperti CPU dan memori agar lebih efisien. Berikut adalah beberapa cara untuk mengoptimalkan resource saat menjalankan container:
+### **Langkah-langkah:**
 
-### **1. Membatasi Penggunaan CPU**
-Anda bisa membatasi jumlah CPU yang digunakan oleh container menggunakan flag `--cpus`:
-```bash
-docker run -it --cpus="1.5" my-ubuntu-image
-```
-Perintah ini akan membatasi container untuk hanya menggunakan 1.5 core CPU.
+1. **Batasi penggunaan CPU:**
+   Jalankan container dengan batas CPU (misalnya 50% dari 1 core):
+   ```bash
+   docker run -d -p 8080:80 --name hello-world-container --cpus="0.5" hello-world-php
+   ```
 
-### **2. Membatasi Penggunaan Memori**
-Gunakan flag `--memory` untuk membatasi penggunaan memori:
-```bash
-docker run -it --memory="1g" my-ubuntu-image
-```
-Perintah ini akan membatasi container untuk menggunakan maksimum 1GB memori.
+2. **Batasi penggunaan RAM:**
+   Jalankan container dengan batas RAM (misalnya 256MB):
+   ```bash
+   docker run -d -p 8080:80 --name hello-world-container --memory="256m" hello-world-php
+   ```
 
-### **3. Menyesuaikan Swap Memory**
-Untuk membatasi penggunaan swap memory, gunakan flag `--memory-swap`:
-```bash
-docker run -it --memory="1g" --memory-swap="2g" my-ubuntu-image
-```
-Perintah ini akan membatasi penggunaan memori fisik hingga 1GB dan swap hingga 2GB.
+3. **Optimasi layer pada Dockerfile:**
+   - Gabungkan perintah yang sering digunakan untuk mengurangi layer:
+     ```dockerfile
+     FROM php:8.0-apache
+     COPY index.php /var/www/html/
+     EXPOSE 80
+     ```
+   - Hindari salinan file yang tidak diperlukan ke dalam container.
 
-### **4. Menetapkan Prioritas I/O**
-Untuk membatasi penggunaan I/O disk, gunakan flag `--blkio-weight`:
-```bash
-docker run -it --blkio-weight=500 my-ubuntu-image
-```
-Perintah ini menetapkan prioritas I/O container, di mana nilai lebih tinggi berarti lebih banyak prioritas.
+4. **Hentikan container yang tidak aktif untuk mengosongkan resource:**
+   ```bash
+   docker stop hello-world-container
+   docker rm hello-world-container
+   ```
 
 ---
 
+## Penutup
+Dokumentasi ini menjelaskan langkah-langkah mulai dari inisiasi image menggunakan Dockerfile, menjalankan container, mempelajari container, hingga mengoptimalkan resource dalam WSL. Ikuti setiap langkah dengan seksama untuk keberhasilan implementasi.
