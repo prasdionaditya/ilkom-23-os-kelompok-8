@@ -84,3 +84,7 @@ Docker menyediakan berbagai jenis jaringan untuk mendukung kebutuhan komunikasi 
    ```bash
    docker network create <network_name>
    ```
+3. **Menghapus Jaringan**:
+   ```bash
+   docker network rm <network_name>
+   ```
