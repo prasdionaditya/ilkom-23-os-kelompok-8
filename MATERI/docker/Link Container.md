@@ -35,3 +35,8 @@ Satu container dapat terhubung ke lebih dari satu jaringan.
 - **Langkah**:
   1. Buat container tanpa jaringan khusus (atau gunakan jaringan default).
   2. Gunakan `docker network connect` untuk menambahkan container ke jaringan lain.
+- **Contoh**:
+  ```bash
+  docker network connect network1 my_container
+  docker network connect network2 my_container
+  ```
