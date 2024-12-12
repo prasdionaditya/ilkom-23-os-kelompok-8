@@ -63,4 +63,14 @@ Docker menyediakan berbagai jenis jaringan untuk mendukung kebutuhan komunikasi 
   docker run --network my_macvlan nginx
   ```
 
-  
+## 6. **Custom Network**
+- **Deskripsi**:
+  - Jaringan yang dibuat pengguna dengan konfigurasi khusus.
+  - Biasanya berbasis bridge atau overlay.
+- **Kegunaan**:
+  - Digunakan untuk kebutuhan jaringan spesifik.
+- **Contoh**:
+  ```bash
+  docker network create my_custom_network
+  docker run --network my_custom_network nginx
+  ```
