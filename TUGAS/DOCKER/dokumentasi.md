@@ -202,13 +202,21 @@ Untuk membuat Docker image menggunakan Dockerfile, ikuti langkah-langkah berikut
    EXPOSE 80
    ```
    Hindari salinan file yang tidak diperlukan ke dalam container.
+   Output:
+
+   ![deskripsi](screenshots/optimasi-layer.png)
 
 4. **Hentikan container yang tidak aktif untuk mengosongkan resource:**
    ```bash
    docker stop hello-world-container
    docker rm hello-world-container
    ```
+   Output:
 
+   ![deskripsi](screenshots/stop-container.png)
+
+
+   
 ---
 
 ## Penutup
