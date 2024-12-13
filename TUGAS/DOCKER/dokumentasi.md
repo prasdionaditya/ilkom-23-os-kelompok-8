@@ -28,16 +28,27 @@ Untuk membuat Docker image menggunakan Dockerfile, ikuti langkah-langkah berikut
    mkdir my-docker-project
    cd my-docker-project
    ```
+   Output:
+
+   ![deskripsi](screenshots/mkdir.png)
 
 2. **Buat file `Dockerfile`**:
    Di dalam direktori proyek, buat file bernama `Dockerfile` dengan cara:
    ```bash
    touch Dockerfile
    ```
+   Output:
+
+   ![deskripsi](screenshots/touch-dockerfile.png)
+
    Setelah itu, edit Dockerfile tersebut dengan cara:
    ```bash
    nano Dockerfile
    ```
+   Output:
+
+   ![deskripsi](screenshots/nano-dockerfile.png)
+
    setelah masuk ke dalam editor, isi file `Dockerfile` sesuai kebutuhan project, contohnya sebagai berikut:
    ```dockerfile
    #Gunakan PHP 8.2 dengan Apache
@@ -60,6 +71,10 @@ Untuk membuat Docker image menggunakan Dockerfile, ikuti langkah-langkah berikut
    cd php
    touch index.php
    ```
+   Output:
+
+   ![deskripsi](screenshots/buat-index.png)
+
 
 4. **Isi file `index.php` dengan kode berikut:**
    ```php
@@ -67,11 +82,17 @@ Untuk membuat Docker image menggunakan Dockerfile, ikuti langkah-langkah berikut
    echo "Hello, World from Docker!";
    ?>
    ```
+   Output:
+
+   ![deskripsi](screenshots/index.png)
 
 5. **Build Docker image:**
    ```bash
    docker build -t hello-world-php .
    ```
+   Output:
+
+   ![deskripsi](screenshots/build-docker.png)
 
 ---
 
@@ -82,18 +103,26 @@ Untuk membuat Docker image menggunakan Dockerfile, ikuti langkah-langkah berikut
    ```bash
    docker run -d -p 8080:80 --name hello-world-container hello-world-php
    ```
+   Output:
+
+   ![deskripsi](screenshots/run-container.png)
 
 2. Verifikasi apakah container berjalan:
    ```bash
    docker ps
    ```
+   Output:
+
+   ![deskripsi](screenshots/verif-container.png)
 
 3. Buka browser atau gunakan `curl` untuk memeriksa aplikasi:
    ```bash
    curl http://localhost:8080
    ```
    Hasilnya akan menampilkan: `Hello, World from Docker!`
+   Output:
 
+   ![deskripsi](screenshots/localhost.png)
 ---
 
 ## 3. Bedah Container
@@ -104,26 +133,41 @@ Untuk membuat Docker image menggunakan Dockerfile, ikuti langkah-langkah berikut
    ```bash
    docker exec hello-world-container ls /dev/
    ```
+   Output:
+
+   ![deskripsi](screenshots/dev-list-perangkat.png)
 
 2. **Informasi tentang OS dalam container**:
    ```bash
    docker exec hello-world-container cat /etc/os-release
    ```
+   Output:
+
+   ![deskripsi](screenshots/os-container.png)
 
 3. **Melihat struktur direktori root container**:
    ```bash
    docker exec hello-world-container ls -l /
    ```
+   Output:
+
+   ![deskripsi](screenshots/struktur-direktori.png)
 
 4. **Melihat file di direktori web server**:
    ```bash
    docker exec hello-world-container ls -l /var/www/html
    ```
+   Output:
+
+   ![deskripsi](screenshots/melihat-file-direktori.png)
 
 5. **Memeriksa proses yang berjalan**:
    ```bash
    docker exec hello-world-container ps aux
    ```
+   Output:
+
+   ![deskripsi](screenshots/periksa-proses-berjalan.png)
 
 ---
 
@@ -136,21 +180,28 @@ Untuk membuat Docker image menggunakan Dockerfile, ikuti langkah-langkah berikut
    ```bash
    docker run -d -p 8080:80 --name hello-world-container --cpus="0.5" hello-world-php
    ```
+   Output:
+
+   ![deskripsi](screenshots/batas-cpu.png)
 
 2. **Batasi penggunaan RAM:**
    Jalankan container dengan batas RAM (misalnya 256MB):
    ```bash
    docker run -d -p 8080:80 --name hello-world-container --memory="256m" hello-world-php
    ```
+   Output:
+
+   ![deskripsi](screenshots/batas-ram.png)
 
 3. **Optimasi layer pada Dockerfile:**
-   - Gabungkan perintah yang sering digunakan untuk mengurangi layer:
-     ```dockerfile
-     FROM php:8.0-apache
-     COPY index.php /var/www/html/
-     EXPOSE 80
-     ```
-   - Hindari salinan file yang tidak diperlukan ke dalam container.
+   
+   Gabungkan perintah yang sering digunakan untuk mengurangi layer:
+   ```dockerfile
+   FROM php:8.0-apache
+   COPY index.php /var/www/html/
+   EXPOSE 80
+   ```
+   Hindari salinan file yang tidak diperlukan ke dalam container.
 
 4. **Hentikan container yang tidak aktif untuk mengosongkan resource:**
    ```bash
